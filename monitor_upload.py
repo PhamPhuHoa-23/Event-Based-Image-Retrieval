@@ -16,7 +16,7 @@ def check_count():
         return None
 
 def main():
-    print("🔍 MONITORING UPLOAD PROGRESS")
+    print(" MONITORING UPLOAD PROGRESS")
     print("=" * 40)
     
     prev_count = 0
@@ -35,7 +35,7 @@ def main():
             
             prev_count = current_count
         else:
-            print("❌ Failed to get count")
+            print(" Failed to get count")
         
         time.sleep(10)  # Check every 10 seconds
 

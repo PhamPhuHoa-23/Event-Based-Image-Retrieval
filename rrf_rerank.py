@@ -94,7 +94,7 @@ def perform_rrf_reranking_adaptive(postfixes, k=60, top_n=None):
     total_queries = len(all_query_ids)
     skipped_queries = 0
     
-    print(f"🔧 Adaptive RRF mode: Each query uses dynamic article count based on minimum available")
+    print(f" Adaptive RRF mode: Each query uses dynamic article count based on minimum available")
     
     for idx, query_id in enumerate(all_query_ids, 1):
         if idx % 100 == 0 or idx == total_queries:
@@ -134,7 +134,7 @@ def perform_rrf_reranking_adaptive(postfixes, k=60, top_n=None):
             skipped_queries += 1
             if idx <= 10:
                 empty_files = [f"submission_{postfixes[i]}.csv" for i, is_valid in enumerate(valid_files) if not is_valid]
-                print(f"  ⚠️ Skipping query {query_id} - empty/missing in: {', '.join(empty_files)}")
+                print(f"   Skipping query {query_id} - empty/missing in: {', '.join(empty_files)}")
             
             # Create empty result row
             result_row = {'query_id': query_id}
@@ -148,7 +148,7 @@ def perform_rrf_reranking_adaptive(postfixes, k=60, top_n=None):
         dynamic_limit = min(min_article_count * 2, max(query_article_counts))  # Gấp đôi nhưng không vượt quá max available
         
         if idx <= 10:  # Log first few queries for debugging
-            print(f"  📊 Query {query_id}: article counts = {query_article_counts}, min = {min_article_count}, using limit = {dynamic_limit}")
+            print(f"   Query {query_id}: article counts = {query_article_counts}, min = {min_article_count}, using limit = {dynamic_limit}")
         
         # Second pass: Collect articles with dynamic limit
         article_scores = defaultdict(float)
@@ -197,7 +197,7 @@ def perform_rrf_reranking_adaptive(postfixes, k=60, top_n=None):
     # Sort by query_id to maintain order
     result_df = result_df.sort_values('query_id').reset_index(drop=True)
     
-    print(f"📊 Adaptive RRF summary: {skipped_queries}/{total_queries} queries skipped ({skipped_queries/total_queries*100:.1f}%)")
+    print(f" Adaptive RRF summary: {skipped_queries}/{total_queries} queries skipped ({skipped_queries/total_queries*100:.1f}%)")
     
     return result_df, skipped_queries
 
@@ -246,7 +246,7 @@ def perform_rrf_reranking(postfixes, k=60, top_n=None):
     total_queries = len(all_query_ids)
     skipped_queries = 0
     
-    print(f"🔧 Anti-bias mode: Queries empty in ANY file will be skipped")
+    print(f" Anti-bias mode: Queries empty in ANY file will be skipped")
     
     for idx, query_id in enumerate(all_query_ids, 1):
         if idx % 100 == 0 or idx == total_queries:
@@ -287,7 +287,7 @@ def perform_rrf_reranking(postfixes, k=60, top_n=None):
             skipped_queries += 1
             if idx <= 10:  # Log first few skipped queries
                 empty_files = [f"submission_{postfixes[i]}.csv" for i, has_results in enumerate(file_has_valid_articles) if not has_results]
-                print(f"  ⚠️ Skipping query {query_id} - empty/missing in: {', '.join(empty_files)}")
+                print(f"   Skipping query {query_id} - empty/missing in: {', '.join(empty_files)}")
             
             # Create empty result row
             result_row = {'query_id': query_id}
@@ -338,7 +338,7 @@ def perform_rrf_reranking(postfixes, k=60, top_n=None):
     # Sort by query_id to maintain order
     result_df = result_df.sort_values('query_id').reset_index(drop=True)
     
-    print(f"📊 Anti-bias summary: {skipped_queries}/{total_queries} queries skipped ({skipped_queries/total_queries*100:.1f}%)")
+    print(f" Anti-bias summary: {skipped_queries}/{total_queries} queries skipped ({skipped_queries/total_queries*100:.1f}%)")
     
     return result_df, skipped_queries
 
@@ -354,7 +354,7 @@ def main():
     
     # Validate minimum number of files
     if len(args.postfixes) < 2:
-        print("❌ Error: At least 2 submission files are required for RRF reranking")
+        print(" Error: At least 2 submission files are required for RRF reranking")
         sys.exit(1)
     
     # Determine RRF mode

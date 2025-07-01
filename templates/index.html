@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚀 ElasticSearch System - Image Retrieval Visualizer</title>
+    <title> ElasticSearch System - Image Retrieval Visualizer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -429,7 +429,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🚀 ElasticSearch System</h1>
+            <h1> ElasticSearch System</h1>
             <p>Advanced Image Retrieval & Analysis Platform</p>
         </div>
         
@@ -459,10 +459,10 @@
                         </label>
                         <select name="dataset_type" id="dataset_type" class="form-select" onchange="this.form.submit()">
                             <option value="public" {% if current_dataset == 'public' %}selected{% endif %}>
-                                🌍 Public Dataset (3000 queries)
+                                 Public Dataset (3000 queries)
                             </option>
                             <option value="private" {% if current_dataset == 'private' %}selected{% endif %}>
-                                🔒 Private Dataset (3187 queries)
+                                 Private Dataset (3187 queries)
                             </option>
                         </select>
                     </div>
@@ -647,21 +647,21 @@
                 let html = '';
                 
                 if (submission && submission !== 'None') {
-                    html += '<span class="file-indicator file-required">✓ Stage 1 Results</span>';
+                    html += '<span class="file-indicator file-required"> Stage 1 Results</span>';
                 } else {
-                    html += '<span class="file-indicator file-missing">✗ Stage 1 Results (Required)</span>';
+                    html += '<span class="file-indicator file-missing"> Stage 1 Results (Required)</span>';
                 }
                 
                 if (track2 && track2 !== 'None') {
-                    html += '<span class="file-indicator file-optional">✓ Track 2 Images</span>';
+                    html += '<span class="file-indicator file-optional"> Track 2 Images</span>';
                 } else {
                     html += '<span class="file-indicator file-optional">- Track 2 Images (Optional)</span>';
                 }
                 
                 if (details && details !== 'None') {
-                    html += '<span class="file-indicator file-required">✓ Entity Details</span>';
+                    html += '<span class="file-indicator file-required"> Entity Details</span>';
                 } else {
-                    html += '<span class="file-indicator file-missing">✗ Entity Details (Required)</span>';
+                    html += '<span class="file-indicator file-missing"> Entity Details (Required)</span>';
                 }
                 
                 indicators.innerHTML = html;

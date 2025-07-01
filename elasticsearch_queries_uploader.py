@@ -48,7 +48,7 @@ class PrivateQueriesUploader:
         # Check if index exists
         if self.es_manager.index_exists(self.private_queries_index):
             count = self.es_manager.get_index_doc_count(self.private_queries_index)
-            print(f"⏩ Index '{self.private_queries_index}' đã tồn tại với {count:,} documents")
+            print(f" Index '{self.private_queries_index}' đã tồn tại với {count:,} documents")
             return True
         
         # Create new index
@@ -59,30 +59,30 @@ class PrivateQueriesUploader:
         )
         
         if response.status_code in [200, 201]:
-            print(f"✅ Đã tạo index mới: {self.private_queries_index}")
+            print(f" Đã tạo index mới: {self.private_queries_index}")
             return True
         else:
-            print(f"❌ Lỗi tạo index {self.private_queries_index}: {response.text}")
+            print(f" Lỗi tạo index {self.private_queries_index}: {response.text}")
             return False
 
     def upload_private_queries(self, file_path="private_entities.json", batch_size=100):
         """Upload private queries từ JSON file"""
         
-        print(f"📤 Uploading private queries from {file_path}...")
+        print(f" Uploading private queries from {file_path}...")
         
         try:
             # Load data
             with open(file_path, 'r', encoding='utf-8') as f:
                 private_data = json.load(f)
             
-            print(f"📊 Loaded {len(private_data):,} private queries")
+            print(f" Loaded {len(private_data):,} private queries")
             
             # Prepare data for upload
             current_time = datetime.now().isoformat()
             total_queries = len(private_data)
             total_batches = (total_queries + batch_size - 1) // batch_size
             
-            print(f"📦 Uploading in {total_batches} batches of {batch_size}...")
+            print(f" Uploading in {total_batches} batches of {batch_size}...")
             
             uploaded = 0
             for batch_num in range(total_batches):
@@ -92,7 +92,7 @@ class PrivateQueriesUploader:
                 # Get batch data
                 batch_keys = list(private_data.keys())[start_idx:end_idx]
                 
-                print(f"📦 Batch {batch_num + 1}/{total_batches}: Processing {len(batch_keys)} queries...", end=" ")
+                print(f" Batch {batch_num + 1}/{total_batches}: Processing {len(batch_keys)} queries...", end=" ")
                 
                 # Create bulk data
                 bulk_data = []
@@ -130,27 +130,27 @@ class PrivateQueriesUploader:
                     errors = sum(1 for item in result.get('items', []) if 'error' in item.get('index', {}))
                     success = len(result.get('items', [])) - errors
                     uploaded += success
-                    print(f"✅ Success: {success}, Errors: {errors}")
+                    print(f" Success: {success}, Errors: {errors}")
                     
                     if errors > 0:
-                        print(f"⚠️ Some errors in batch {batch_num + 1}")
+                        print(f" Some errors in batch {batch_num + 1}")
                 else:
-                    print(f"❌ Bulk request failed: {response.status_code}")
+                    print(f" Bulk request failed: {response.status_code}")
                     print(response.text[:200])
             
-            print(f"\n🎉 Upload completed!")
-            print(f"📊 Total uploaded: {uploaded:,}/{total_queries:,} queries")
+            print(f"\n Upload completed!")
+            print(f" Total uploaded: {uploaded:,}/{total_queries:,} queries")
             
             # Verify upload
             final_count = self.es_manager.get_index_doc_count(self.private_queries_index)
-            print(f"📈 Final count in index: {final_count:,}")
+            print(f" Final count in index: {final_count:,}")
             
         except Exception as e:
-            print(f"❌ Error uploading: {e}")
+            print(f" Error uploading: {e}")
 
     def verify_private_queries(self):
         """Verify uploaded private queries"""
-        print("🔍 Verifying private queries...")
+        print(" Verifying private queries...")
         
         try:
             # Get sample
@@ -165,8 +165,8 @@ class PrivateQueriesUploader:
                 hits = result["hits"]["hits"]
                 total = result["hits"]["total"]["value"]
                 
-                print(f"✅ Total documents: {total:,}")
-                print(f"📝 Sample documents:")
+                print(f" Total documents: {total:,}")
+                print(f" Sample documents:")
                 
                 for i, hit in enumerate(hits, 1):
                     doc = hit["_source"]
@@ -176,32 +176,32 @@ class PrivateQueriesUploader:
                     print(f"     Data type: {doc['data_type']}")
                     print()
             else:
-                print(f"❌ Search failed: {response.status_code}")
+                print(f" Search failed: {response.status_code}")
                 
         except Exception as e:
-            print(f"❌ Verification error: {e}")
+            print(f" Verification error: {e}")
 
 def main():
-    print("🚀 PRIVATE QUERIES UPLOADER")
+    print(" PRIVATE QUERIES UPLOADER")
     print("=" * 50)
     
     uploader = PrivateQueriesUploader()
     
     # Step 1: Create index
-    print("\n1️⃣ Creating private_queries index...")
+    print("\n1⃣ Creating private_queries index...")
     if not uploader.create_private_queries_index():
-        print("❌ Failed to create index")
+        print(" Failed to create index")
         return
     
     # Step 2: Upload data
-    print("\n2️⃣ Uploading private queries...")
+    print("\n2⃣ Uploading private queries...")
     uploader.upload_private_queries()
     
     # Step 3: Verify
-    print("\n3️⃣ Verifying upload...")
+    print("\n3⃣ Verifying upload...")
     uploader.verify_private_queries()
     
-    print("\n🎉 PRIVATE QUERIES UPLOAD COMPLETE!")
+    print("\n PRIVATE QUERIES UPLOAD COMPLETE!")
 
 if __name__ == "__main__":
     main() 

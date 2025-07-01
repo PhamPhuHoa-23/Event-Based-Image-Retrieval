@@ -71,13 +71,13 @@ try:
     from qdrant_client import QdrantClient
     from qdrant_client.models import Filter, FieldCondition, MatchAny, QueryRequest
 except ImportError:
-    print("❌ Cần cài qdrant-client: pip install qdrant-client")
+    print(" Cần cài qdrant-client: pip install qdrant-client")
     sys.exit(1)
 
 try:
     from rrf_rerank import perform_rrf_reranking_adaptive, load_submission_file
 except ImportError:
-    print("❌ Không thể import rrf_rerank module. Đảm bảo file rrf_rerank.py ở cùng thư mục.")
+    print(" Không thể import rrf_rerank module. Đảm bảo file rrf_rerank.py ở cùng thư mục.")
 
 class ProfessionalSearchPipeline:
     def __init__(self, 
@@ -158,11 +158,11 @@ class ProfessionalSearchPipeline:
         
         # Load JSON config or use legacy parameters
         if json_config_file:
-            print(f"📄 Loading JSON config from: {json_config_file}")
+            print(f" Loading JSON config from: {json_config_file}")
             self.config_data = self.load_json_config(json_config_file)
             self.enable_multi_model = True  # JSON config always uses multi-model mode
         else:
-            print("⚙️ Using legacy parameter configuration")
+            print(" Using legacy parameter configuration")
             self.config_data = None
         
         # Database mapping: OpenEvents_v1 searches on Flickr30k database
@@ -183,12 +183,12 @@ class ProfessionalSearchPipeline:
         try:
             if qdrant_url:
                 self.client = QdrantClient(url=qdrant_url)
-                print(f"✅ Connected to Qdrant: {qdrant_url}")
+                print(f" Connected to Qdrant: {qdrant_url}")
             else:
                 self.client = QdrantClient(host=qdrant_host, port=qdrant_port)
-                print(f"✅ Connected to Qdrant: {qdrant_host}:{qdrant_port}")
+                print(f" Connected to Qdrant: {qdrant_host}:{qdrant_port}")
         except Exception as e:
-            print(f"❌ Lỗi kết nối Qdrant: {e}")
+            print(f" Lỗi kết nối Qdrant: {e}")
             raise
         
         # Load article mapping
@@ -243,7 +243,7 @@ class ProfessionalSearchPipeline:
                 if config["family_weight"] <= 0.0
             }
             if filtered_families:
-                print(f"⚠️ Filtered out families with weight=0: {list(filtered_families.keys())}")
+                print(f" Filtered out families with weight=0: {list(filtered_families.keys())}")
         else:
             # Filter active collections with weight > 0 (single-model mode)
             self.active_model_weights = {
@@ -256,65 +256,65 @@ class ProfessionalSearchPipeline:
                 if weight <= 0.0
             }
             if filtered_collections:
-                print(f"⚠️ Filtered out collections with weight=0: {list(filtered_collections.keys())}")
+                print(f" Filtered out collections with weight=0: {list(filtered_collections.keys())}")
         
         # Validation: Ensure at least one collection/family is active
         if enable_multi_model:
             if not self.active_families:
-                raise ValueError("❌ All model families have weight=0. At least one family must have weight > 0.")
+                raise ValueError(" All model families have weight=0. At least one family must have weight > 0.")
         else:
             if not self.active_model_weights:
-                raise ValueError("❌ All model collections have weight=0. At least one collection must have weight > 0.")
+                raise ValueError(" All model collections have weight=0. At least one collection must have weight > 0.")
         
         # Print configuration
         if self.config_data:
             # JSON config mode
-            print(f"🎯 JSON CONFIG MODE")
-            print(f"   📊 Database configurations: {len(self.config_data)}")
+            print(f" JSON CONFIG MODE")
+            print(f"    Database configurations: {len(self.config_data)}")
             if hasattr(self, 'model_families'):
-                print(f"   📊 Model families: {len(self.model_families)}")
-                print(f"   ✅ Active families: {list(self.active_families.keys())}")
+                print(f"    Model families: {len(self.model_families)}")
+                print(f"    Active families: {list(self.active_families.keys())}")
             if hasattr(self, 'model_weights'):
-                print(f"   🎯 Total model weights: {len(self.model_weights)}")
+                print(f"    Total model weights: {len(self.model_weights)}")
         else:
             # Legacy mode
             database_name = self.database_mapping[self.primary_checkpoint]
             
             if self.enable_multi_model:
                 family_count = len(self.active_families) if hasattr(self, 'active_families') else 0
-                print(f"🎯 LEGACY MULTI-MODEL MODE ({family_count} families)")
-                print(f"   📋 Primary checkpoint: {self.primary_checkpoint}")
-                print(f"   🗄️ Database mapping: {self.primary_checkpoint} → {database_name}")
+                print(f" LEGACY MULTI-MODEL MODE ({family_count} families)")
+                print(f"    Primary checkpoint: {self.primary_checkpoint}")
+                print(f"    Database mapping: {self.primary_checkpoint} → {database_name}")
                 if hasattr(self, 'active_families'):
-                    print(f"   ✅ Active families: {list(self.active_families.keys())}")
+                    print(f"    Active families: {list(self.active_families.keys())}")
             else:
-                print(f"🎯 LEGACY SINGLE-MODEL MODE ({self.primary_checkpoint}-Large only)")
-                print(f"   📋 Primary checkpoint: {self.primary_checkpoint}")
-                print(f"   🗄️ Database mapping: {self.primary_checkpoint} → {database_name}")
+                print(f" LEGACY SINGLE-MODEL MODE ({self.primary_checkpoint}-Large only)")
+                print(f"    Primary checkpoint: {self.primary_checkpoint}")
+                print(f"    Database mapping: {self.primary_checkpoint} → {database_name}")
                 if hasattr(self, 'active_model_weights'):
-                    print(f"   ✅ Active collections: {list(self.active_model_weights.keys())}")
+                    print(f"    Active collections: {list(self.active_model_weights.keys())}")
         
         # Print aggregation mode
         aggregation_mode = "VOTING" if self.use_voting else "RRF"
-        print(f"🗳️ AGGREGATION MODE: {aggregation_mode}")
+        print(f" AGGREGATION MODE: {aggregation_mode}")
         if not self.use_voting:
-            print(f"   🔄 RRF k: {self.rrf_k}, Multi-model RRF k: {self.multi_model_rrf_k}")
+            print(f"    RRF k: {self.rrf_k}, Multi-model RRF k: {self.multi_model_rrf_k}")
         
         # Print date filtering status
-        print(f"🗓️ DATE FILTERING: DISABLED (using original cascade system)")
+        print(f" DATE FILTERING: DISABLED (using original cascade system)")
         
         # Print private test mode status
         if self.private_test_mode:
-            print(f"🔒 PRIVATE TEST MODE: ENABLED (using Private_ prefix for query collections)")
+            print(f" PRIVATE TEST MODE: ENABLED (using Private_ prefix for query collections)")
         else:
-            print(f"🔒 PRIVATE TEST MODE: DISABLED (using standard query collections)")
+            print(f" PRIVATE TEST MODE: DISABLED (using standard query collections)")
         
-        print(f"📊 Article ranking boost: {self.article_ranking_boost}")
+        print(f" Article ranking boost: {self.article_ranking_boost}")
         if self.use_sigmoid_boosting:
-            print(f"🧠 Using Sigmoid Boosting:")
-            print(f"   📈 Similarity threshold: {self.similarity_threshold}")
-            print(f"   ⚖️ Similarity weight: {self.similarity_weight}, Rank weight: {self.rank_weight}")
-            print(f"   🚀 Max boost factor: {self.max_boost_factor}")
+            print(f" Using Sigmoid Boosting:")
+            print(f"    Similarity threshold: {self.similarity_threshold}")
+            print(f"    Similarity weight: {self.similarity_weight}, Rank weight: {self.rank_weight}")
+            print(f"    Max boost factor: {self.max_boost_factor}")
     
     def load_json_config(self, json_config_file: str) -> Dict:
         """
@@ -332,18 +332,18 @@ class ProfessionalSearchPipeline:
             with open(json_config_file, 'r', encoding='utf-8') as f:
                 config = json.load(f)
             
-            print(f"✅ Loaded JSON config:")
+            print(f" Loaded JSON config:")
             for db_name, db_config in config.items():
                 db_weight = db_config.get("weight", 1.0)
                 query_collections = db_config.get("query_collections", [])
-                print(f"   🗄️ Database: {db_name} (weight: {db_weight})")
+                print(f"    Database: {db_name} (weight: {db_weight})")
                 for q_col in query_collections:
                     for col_name, col_weight in q_col.items():
-                        print(f"      🎯 {col_name}: {col_weight}")
+                        print(f"       {col_name}: {col_weight}")
             
             return config
         except Exception as e:
-            print(f"❌ Error loading JSON config: {e}")
+            print(f" Error loading JSON config: {e}")
             raise
     
     def build_config_from_json(self):
@@ -379,9 +379,9 @@ class ProfessionalSearchPipeline:
             family_name = db_name.replace("Database_", "")
             self.model_families[family_name] = family_config
         
-        print(f"🔧 Built from JSON config:")
-        print(f"   📊 Model families: {len(self.model_families)}")
-        print(f"   🎯 Model weights: {len(self.model_weights)}")
+        print(f" Built from JSON config:")
+        print(f"    Model families: {len(self.model_families)}")
+        print(f"    Model weights: {len(self.model_weights)}")
     
     def _build_legacy_config(self, primary_checkpoint, enable_h14_laion, enable_multi_model,
                            primary_query_large_weight, primary_summary_large_weight, primary_concise_large_weight,
@@ -485,7 +485,7 @@ class ProfessionalSearchPipeline:
         output_dir = os.path.join("app_results", dir_name)
         os.makedirs(output_dir, exist_ok=True)
         
-        print(f"📁 Output directory: {output_dir}")
+        print(f" Output directory: {output_dir}")
         return output_dir
     
     def save_config(self, output_dir, args=None, **kwargs):
@@ -530,7 +530,7 @@ class ProfessionalSearchPipeline:
                 for key, value in kwargs.items():
                     f.write(f"{key}: {value}\n")
         
-        print(f"💾 Config saved: {config_file}")
+        print(f" Config saved: {config_file}")
         return config_file
     
     def load_article_mapping(self, article_mapping_json: str) -> Dict[str, List[str]]:
@@ -538,10 +538,10 @@ class ProfessionalSearchPipeline:
         try:
             with open(article_mapping_json, 'r', encoding='utf-8') as f:
                 mapping = json.load(f)
-            print(f"✅ Loaded {len(mapping):,} article mappings")
+            print(f" Loaded {len(mapping):,} article mappings")
             return mapping
         except Exception as e:
-            print(f"❌ Lỗi đọc article mapping: {e}")
+            print(f" Lỗi đọc article mapping: {e}")
             return {}
     
     def text_search_pipeline(self, output_dir=None, filename_suffix="cascade", top_k=10, max_queries=None) -> Tuple[str, str]:
@@ -549,7 +549,7 @@ class ProfessionalSearchPipeline:
         Chạy text search pipeline với cascade + celebrity filtering
         Returns: (csv_path, json_path)
         """
-        print("\n🔍 TEXT SEARCH PIPELINE (CASCADE + CELEBRITY)")
+        print("\n TEXT SEARCH PIPELINE (CASCADE + CELEBRITY)")
         print("=" * 60)
         
         if output_dir:
@@ -583,9 +583,9 @@ class ProfessionalSearchPipeline:
             try:
                 with open(json_path, 'w', encoding='utf-8') as f:
                     json.dump(json_data, f, ensure_ascii=False, indent=2)
-                print(f"📄 Created JSON: {json_path}")
+                print(f" Created JSON: {json_path}")
             except Exception as e:
-                print(f"⚠️ Could not create JSON file: {e}")
+                print(f" Could not create JSON file: {e}")
                 json_path = None
         else:
             # Enhanced entity search with weighted entity scoring
@@ -600,9 +600,9 @@ class ProfessionalSearchPipeline:
             csv_path = f"submission_{filename_suffix}.csv"
             json_path = f"stage_1_{filename_suffix}.json"  # Updated for consistency
         
-        print(f"✅ Text search completed:")
-        print(f"   📄 CSV: {csv_path}")
-        print(f"   📄 JSON: {json_path}")
+        print(f" Text search completed:")
+        print(f"    CSV: {csv_path}")
+        print(f"    JSON: {json_path}")
         return csv_path, json_path
     
     def rrf_rerank_csvs(self, csv_files: List[str], adaptive_mode=True, output_dir=None) -> str:
@@ -610,13 +610,13 @@ class ProfessionalSearchPipeline:
         RRF rerank CSV files (1 file cũng được - sẽ copy trực tiếp)
         Returns: path to RRF CSV file
         """
-        print(f"\n🔄 PROCESSING {len(csv_files)} CSV FILE(S)")
+        print(f"\n PROCESSING {len(csv_files)} CSV FILE(S)")
         print("=" * 60)
         
         if len(csv_files) == 1:
             # Chỉ có 1 file - copy trực tiếp
             csv_file = csv_files[0]
-            print(f"📁 Single file mode: {csv_file}")
+            print(f" Single file mode: {csv_file}")
             
             # Copy file to output directory
             if output_dir:
@@ -630,10 +630,10 @@ class ProfessionalSearchPipeline:
                 df = df.fillna('#')
                 df.to_csv(output_path, index=False)
                 
-                print(f"✅ File copied: {output_path}")
+                print(f" File copied: {output_path}")
                 return output_path
             else:
-                print(f"✅ Using original file: {csv_file}")
+                print(f" Using original file: {csv_file}")
                 return csv_file
         
         # Multiple files - RRF
@@ -644,7 +644,7 @@ class ProfessionalSearchPipeline:
         for i, csv_file in enumerate(csv_files):
             # Ensure file exists
             if not os.path.exists(csv_file):
-                print(f"❌ File not found: {csv_file}")
+                print(f" File not found: {csv_file}")
                 continue
                 
             basename = os.path.basename(csv_file)
@@ -672,15 +672,15 @@ class ProfessionalSearchPipeline:
             try:
                 shutil.copy2(csv_file, target_file)
                 copied_files.append(target_file)
-                print(f"📋 Copied: {csv_file} -> {target_file}")
+                print(f" Copied: {csv_file} -> {target_file}")
             except Exception as e:
-                print(f"❌ Failed to copy {csv_file}: {e}")
+                print(f" Failed to copy {csv_file}: {e}")
                 continue
         
         if not postfixes:
             raise ValueError("No valid CSV files found")
         
-        print(f"📁 RRF Processing postfixes: {postfixes}")
+        print(f" RRF Processing postfixes: {postfixes}")
         
         try:
             # Thực hiện RRF
@@ -697,9 +697,9 @@ class ProfessionalSearchPipeline:
             for copied_file in copied_files:
                 try:
                     os.remove(copied_file)
-                    print(f"🗑️ Cleaned up: {copied_file}")
+                    print(f" Cleaned up: {copied_file}")
                 except Exception as e:
-                    print(f"⚠️ Could not remove {copied_file}: {e}")
+                    print(f" Could not remove {copied_file}: {e}")
         
         # Save RRF result
         if output_dir:
@@ -714,8 +714,8 @@ class ProfessionalSearchPipeline:
         result_df = result_df.fillna('#')
         result_df.to_csv(rrf_csv_path, index=False)
         
-        print(f"✅ RRF completed: {rrf_csv_path}")
-        print(f"📊 Queries processed: {len(result_df)}, Skipped: {skipped_queries}")
+        print(f" RRF completed: {rrf_csv_path}")
+        print(f" Queries processed: {len(result_df)}, Skipped: {skipped_queries}")
         
         return rrf_csv_path
     
@@ -730,39 +730,39 @@ class ProfessionalSearchPipeline:
         if not self.enable_multi_model:
             raise ValueError("Multi-model mode not enabled. Use image_search_pipeline() instead.")
         
-        print(f"\n🚀 MULTI-MODEL IMAGE SEARCH PIPELINE")
+        print(f"\n MULTI-MODEL IMAGE SEARCH PIPELINE")
         print("=" * 60)
-        print(f"📂 Text search CSV: {text_search_csv}")
+        print(f" Text search CSV: {text_search_csv}")
         
         # Use pre-filtered active families
         active_families = self.active_families
-        print(f"🎯 Active model families: {list(active_families.keys())}")
-        print(f"📊 Max articles per query: {max_articles_per_query}")
-        print(f"🔍 Direct search top-k: {direct_search_top_k}")
-        print(f"🏆 Final top-k: {final_top_k}")
+        print(f" Active model families: {list(active_families.keys())}")
+        print(f" Max articles per query: {max_articles_per_query}")
+        print(f" Direct search top-k: {direct_search_top_k}")
+        print(f" Final top-k: {final_top_k}")
         
         # Load và classify queries
         query_to_articles, queries_with_articles, queries_without_articles = self.load_and_classify_queries(
             text_search_csv, max_articles_per_query
         )
         
-        print(f"📊 Queries với articles: {len(queries_with_articles)}")
-        print(f"📊 Queries không có articles: {len(queries_without_articles)}")
+        print(f" Queries với articles: {len(queries_with_articles)}")
+        print(f" Queries không có articles: {len(queries_without_articles)}")
         
         # Results từ tất cả model families
         family_results = {}
         
         # Search với từng model family
         for family_name, family_config in active_families.items():
-            print(f"\n🔥 Processing {family_name} family...")
+            print(f"\n Processing {family_name} family...")
             
             query_collections = family_config["query_collections"]
             search_collection = family_config["search_collection"]
             family_weight = family_config["family_weight"]
             
-            print(f"   🎯 Query collections: {query_collections}")
-            print(f"   🗄️ Search collection: {search_collection}")
-            print(f"   ⚖️ Family weight: {family_weight}")
+            print(f"    Query collections: {query_collections}")
+            print(f"    Search collection: {search_collection}")
+            print(f"    Family weight: {family_weight}")
             
             # Search results cho family này
             family_search_results = {}
@@ -789,7 +789,7 @@ class ProfessionalSearchPipeline:
             else:
                 family_final_results = self.rrf_final_collections(family_search_results)
             
-            # 🗃️ MEMORY OPTIMIZATION: Save intermediate results and clear variables
+            #  MEMORY OPTIMIZATION: Save intermediate results and clear variables
             import tempfile
             import pickle
             temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=f"_{family_name}.pkl")
@@ -809,29 +809,29 @@ class ProfessionalSearchPipeline:
             if 'results_without_articles' in locals():
                 del results_without_articles
             
-            print(f"✅ {family_name} completed: {len(family_final_results)} queries (temp saved)")
-            print(f"💾 Temp file: {temp_file.name}")
+            print(f" {family_name} completed: {len(family_final_results)} queries (temp saved)")
+            print(f" Temp file: {temp_file.name}")
         
         # Multi-model aggregation across families
         if self.use_voting:
-            print(f"\n🗳️ MULTI-MODEL VOTING across {len(family_results)} families...")
+            print(f"\n MULTI-MODEL VOTING across {len(family_results)} families...")
             final_results = self.multi_model_rrf(family_results, final_top_k, use_voting=True)
         else:
-            print(f"\n🔄 MULTI-MODEL RRF across {len(family_results)} families...")
+            print(f"\n MULTI-MODEL RRF across {len(family_results)} families...")
             final_results = self.multi_model_rrf(family_results, final_top_k, use_voting=False)
         
-        # 🗑️ CLEANUP: Remove temp files
-        print(f"\n🗑️ Cleaning up temp files...")
+        #  CLEANUP: Remove temp files
+        print(f"\n Cleaning up temp files...")
         for family_name, family_data in family_results.items():
             if "temp_file" in family_data:
                 try:
                     import os
                     os.unlink(family_data["temp_file"])
-                    print(f"   ✅ Removed {family_data['temp_file']}")
+                    print(f"    Removed {family_data['temp_file']}")
                 except Exception as e:
-                    print(f"   ⚠️ Could not remove {family_data['temp_file']}: {e}")
+                    print(f"    Could not remove {family_data['temp_file']}: {e}")
         
-        print(f"✅ Multi-model image search completed: {len(final_results)} queries processed")
+        print(f" Multi-model image search completed: {len(final_results)} queries processed")
         return final_results
     
     def get_query_collection_name(self, base_name: str) -> str:
@@ -866,35 +866,35 @@ class ProfessionalSearchPipeline:
         # Filter query_collections to only include active ones (weight > 0)
         if hasattr(self, 'active_model_weights'):
             query_collections = [col for col in query_collections if col in self.active_model_weights]
-            print(f"🎯 Filtered active query collections: {query_collections}")
+            print(f" Filtered active query collections: {query_collections}")
         
         if not query_collections:
-            print("❌ No active query collections available (all weights are 0)")
+            print(" No active query collections available (all weights are 0)")
             return {}
         
-        print(f"\n🖼️ IMAGE SEARCH PIPELINE")
+        print(f"\n IMAGE SEARCH PIPELINE")
         print("=" * 60)
-        print(f"📂 Text search CSV: {text_search_csv}")
-        print(f"🎯 Query collections: {query_collections}")
-        print(f"🗄️ Search collection: {search_collection}")
-        print(f"📊 Max articles per query: {max_articles_per_query}")
-        print(f"🔍 Direct search top-k: {direct_search_top_k}")
-        print(f"🏆 Final top-k: {final_top_k}")
+        print(f" Text search CSV: {text_search_csv}")
+        print(f" Query collections: {query_collections}")
+        print(f" Search collection: {search_collection}")
+        print(f" Max articles per query: {max_articles_per_query}")
+        print(f" Direct search top-k: {direct_search_top_k}")
+        print(f" Final top-k: {final_top_k}")
         
         # Load text search results và phân loại queries
         query_to_articles, queries_with_articles, queries_without_articles = self.load_and_classify_queries(
             text_search_csv, max_articles_per_query
         )
         
-        print(f"📊 Queries với articles: {len(queries_with_articles)}")
-        print(f"📊 Queries không có articles: {len(queries_without_articles)}")
+        print(f" Queries với articles: {len(queries_with_articles)}")
+        print(f" Queries không có articles: {len(queries_without_articles)}")
         
         # Search cho từng loại query
         all_search_results = {}
         
         # 1. Queries CÓ articles - search với article filtering và ranking boost
         if queries_with_articles:
-            print(f"\n🔍 Processing queries WITH articles...")
+            print(f"\n Processing queries WITH articles...")
             results_with_articles = self.search_queries_with_articles(
                 queries_with_articles, query_to_articles, query_collections, 
                 search_collection, final_top_k
@@ -903,7 +903,7 @@ class ProfessionalSearchPipeline:
         
         # 2. Queries KHÔNG có articles - search trực tiếp với Query-BEiT3-Large
         if queries_without_articles:
-            print(f"\n🔍 Processing queries WITHOUT articles...")
+            print(f"\n Processing queries WITHOUT articles...")
             results_without_articles = self.search_queries_without_articles(
                 queries_without_articles, query_collections, search_collection,
                 direct_search_top_k, final_top_k
@@ -912,13 +912,13 @@ class ProfessionalSearchPipeline:
         
         # Aggregate final results từ multiple collections
         if self.use_voting:
-            print(f"\n🗳️ Final VOTING across collections...")
+            print(f"\n Final VOTING across collections...")
             final_results = self.voting_final_collections(all_search_results)
         else:
-            print(f"\n🔄 Final RRF across collections...")
+            print(f"\n Final RRF across collections...")
             final_results = self.rrf_final_collections(all_search_results)
         
-        print(f"✅ Image search completed: {len(final_results)} queries processed")
+        print(f" Image search completed: {len(final_results)} queries processed")
         return final_results
     
     def load_and_classify_queries(self, csv_path: str, max_articles: int) -> Tuple[Dict, List, List]:
@@ -962,7 +962,7 @@ class ProfessionalSearchPipeline:
         
         for query_idx, query_id in enumerate(queries, 1):
             if query_idx % 50 == 0 or query_idx == len(queries):
-                print(f"🔄 Processing query {query_idx}/{len(queries)}: {query_id}")
+                print(f" Processing query {query_idx}/{len(queries)}: {query_id}")
             
             article_ids = query_to_articles[query_id]
             
@@ -1002,9 +1002,9 @@ class ProfessionalSearchPipeline:
             
             # Debug: Print query processing info
             if self.debug:
-                print(f"\n🔍 DEBUG: Processing query {query_id} WITH articles")
-                print(f"📄 Articles: {len(article_ids)} | Candidate images: {len(unique_candidates)}")
-                print(f"🎯 Active collections: {active_collections}")
+                print(f"\n DEBUG: Processing query {query_id} WITH articles")
+                print(f" Articles: {len(article_ids)} | Candidate images: {len(unique_candidates)}")
+                print(f" Active collections: {active_collections}")
             
             for collection_name in active_collections:
                 query_vector = self.get_query_embedding(collection_name, query_id)
@@ -1047,10 +1047,10 @@ class ProfessionalSearchPipeline:
             # Debug: Print similarity scores
             if self.debug and len(search_result) > 0:
                 similarities = [hit.score for hit in search_result]
-                print(f"\n🔍 DEBUG: Search results from {collection_name}")
-                print(f"📊 Candidates: {len(candidate_image_ids)}, Found: {len(search_result)}")
-                print(f"📈 Similarity range: {min(similarities):.6f} - {max(similarities):.6f} | Avg: {sum(similarities)/len(similarities):.6f}")
-                print("🎯 Top similarity scores:")
+                print(f"\n DEBUG: Search results from {collection_name}")
+                print(f" Candidates: {len(candidate_image_ids)}, Found: {len(search_result)}")
+                print(f" Similarity range: {min(similarities):.6f} - {max(similarities):.6f} | Avg: {sum(similarities)/len(similarities):.6f}")
+                print(" Top similarity scores:")
                 for i, hit in enumerate(search_result[:5], 1):
                     image_id = hit.payload.get("image_id", "unknown")
                     similarity = hit.score
@@ -1063,7 +1063,7 @@ class ProfessionalSearchPipeline:
                 image_id = hit.payload.get("image_id", "unknown")
                 base_score = hit.score  # This is the similarity score from Qdrant
                 
-                # 🎯 Advanced Sigmoid Boosting với similarity + article rank
+                #  Advanced Sigmoid Boosting với similarity + article rank
                 article_rank = article_rank_map.get(image_id, 999)
                 ranking_boost = self.calculate_sigmoid_boost(base_score, article_rank)
                 
@@ -1082,19 +1082,19 @@ class ProfessionalSearchPipeline:
             # Debug output for first query with results (show detailed scoring)
             if self.debug and results and len(results) > 0 and self._debug_query_count < self._max_debug_queries:
                 self._debug_query_count += 1
-                print(f"\n🔍 DEBUG: Sigmoid Boosting Details for collection '{collection_name}' (Query #{self._debug_query_count})")
+                print(f"\n DEBUG: Sigmoid Boosting Details for collection '{collection_name}' (Query #{self._debug_query_count})")
                 if self.use_sigmoid_boosting:
-                    print(f"🧠 Sigmoid Config: sim_weight={self.similarity_weight}, rank_weight={self.rank_weight}, max_boost={self.max_boost_factor}")
+                    print(f" Sigmoid Config: sim_weight={self.similarity_weight}, rank_weight={self.rank_weight}, max_boost={self.max_boost_factor}")
                 else:
-                    print(f"📊 Simple boosting: factor={self.article_ranking_boost}")
-                print(f"📝 Showing top 5 results:")
+                    print(f" Simple boosting: factor={self.article_ranking_boost}")
+                print(f" Showing top 5 results:")
                 print("-" * 100)
                 for i, result in enumerate(results[:5], 1):
                     print(f"{i:2d}. Image: {result['image_id']}")
-                    print(f"    📐 Base similarity: {result['base_score']:.6f}")
-                    print(f"    📈 Article rank: #{result['article_rank']}")
-                    print(f"    🔧 {result['boost_explanation']}")
-                    print(f"    🎯 Final score: {result['score']:.6f}")
+                    print(f"     Base similarity: {result['base_score']:.6f}")
+                    print(f"     Article rank: #{result['article_rank']}")
+                    print(f"     {result['boost_explanation']}")
+                    print(f"     Final score: {result['score']:.6f}")
                     print()
             
             # Sort by final score
@@ -1103,7 +1103,7 @@ class ProfessionalSearchPipeline:
             return results
             
         except Exception as e:
-            print(f"❌ Search error: {e}")
+            print(f" Search error: {e}")
             return []
     
     def search_queries_without_articles(self, queries: List[str], 
@@ -1127,22 +1127,22 @@ class ProfessionalSearchPipeline:
                 active_collections_from_families.extend(family_config["query_collections"])
             optimized_collections = [col for col in optimized_collections if col in active_collections_from_families]
         
-        print(f"🎯 OPTIMIZED: Using {optimized_collections} for {len(queries)} queries without articles")
+        print(f" OPTIMIZED: Using {optimized_collections} for {len(queries)} queries without articles")
         
         if not optimized_collections:
-            print("❌ No active optimized collections available (all weights are 0)")
+            print(" No active optimized collections available (all weights are 0)")
             return {}
         
         for query_idx, query_id in enumerate(queries, 1):
             if query_idx % 50 == 0 or query_idx == len(queries):
-                print(f"🔄 Processing query {query_idx}/{len(queries)}: {query_id}")
+                print(f" Processing query {query_idx}/{len(queries)}: {query_id}")
             
             query_results = {}
             
             # Debug: Print query processing info for queries without articles
             if self.debug:
-                print(f"\n🔍 DEBUG: Processing query {query_id} WITHOUT articles")
-                print(f"🎯 Optimized collections: {optimized_collections}")
+                print(f"\n DEBUG: Processing query {query_id} WITHOUT articles")
+                print(f" Optimized collections: {optimized_collections}")
             
             # Chỉ search với optimized collections (đã được filter active)
             for collection_name in optimized_collections:
@@ -1181,16 +1181,16 @@ class ProfessionalSearchPipeline:
             if search_result[0]:
                 point = search_result[0][0]
                 if self.debug:
-                    print(f"✅ Found embedding for query {query_id} in {collection_name} | Vector dim: {len(point.vector) if point.vector else 0}")
+                    print(f" Found embedding for query {query_id} in {collection_name} | Vector dim: {len(point.vector) if point.vector else 0}")
                 return point.vector
             else:
                 if self.debug:
-                    print(f"❌ No embedding found for query {query_id} in {collection_name}")
+                    print(f" No embedding found for query {query_id} in {collection_name}")
                 return None
                 
         except Exception as e:
             if self.debug:
-                print(f"❌ Error getting embedding for {query_id} from {collection_name}: {e}")
+                print(f" Error getting embedding for {query_id} from {collection_name}: {e}")
             return None
     
     def search_similar_images_no_filter(self, collection_name: str, 
@@ -1209,10 +1209,10 @@ class ProfessionalSearchPipeline:
             # Debug: Print similarity scores for direct search
             if self.debug and len(search_result) > 0:
                 similarities = [hit.score for hit in search_result]
-                print(f"\n🔍 DEBUG: Direct search results from {collection_name}")
-                print(f"📊 Found: {len(search_result)} results")
-                print(f"📈 Similarity range: {min(similarities):.6f} - {max(similarities):.6f} | Avg: {sum(similarities)/len(similarities):.6f}")
-                print("🎯 Top similarity scores:")
+                print(f"\n DEBUG: Direct search results from {collection_name}")
+                print(f" Found: {len(search_result)} results")
+                print(f" Similarity range: {min(similarities):.6f} - {max(similarities):.6f} | Avg: {sum(similarities)/len(similarities):.6f}")
+                print(" Top similarity scores:")
                 for i, hit in enumerate(search_result[:5], 1):
                     image_id = hit.payload.get("image_id", "unknown")
                     similarity = hit.score
@@ -1231,7 +1231,7 @@ class ProfessionalSearchPipeline:
             return results
             
         except Exception as e:
-            print(f"❌ Direct search error: {e}")
+            print(f" Direct search error: {e}")
             return []
     
     def rrf_final_collections(self, search_results: Dict[str, Dict[str, List[Dict]]]) -> Dict[str, List[str]]:
@@ -1260,7 +1260,7 @@ class ProfessionalSearchPipeline:
                 active_weights = self.model_weights
         
         mode_name = "VOTING" if use_voting else "RRF"
-        print(f"🔄 {mode_name} with active model weights: {active_weights}")
+        print(f" {mode_name} with active model weights: {active_weights}")
         
         final_results = {}
         
@@ -1306,11 +1306,11 @@ class ProfessionalSearchPipeline:
         Returns: final_results dict
         """
         mode_name = "VOTING" if use_voting else "RRF"
-        print(f"🔄 Multi-model {mode_name} with {len(family_results)} families:")
+        print(f" Multi-model {mode_name} with {len(family_results)} families:")
         for family_name, data in family_results.items():
             weight = data["weight"]
             num_queries = len(data["results"])
-            print(f"   🔥 {family_name}: {num_queries} queries, weight={weight}")
+            print(f"    {family_name}: {num_queries} queries, weight={weight}")
         
         # Get all unique query_ids
         all_query_ids = set()
@@ -1344,7 +1344,7 @@ class ProfessionalSearchPipeline:
             # Final top-k images
             final_results[query_id] = [img_id for img_id, score in sorted_images[:final_top_k]]
         
-        print(f"✅ Multi-model {mode_name} completed: {len(final_results)} queries processed")
+        print(f" Multi-model {mode_name} completed: {len(final_results)} queries processed")
         return final_results
     
     def save_final_image_results(self, final_results: Dict[str, List[str]], output_dir=None, filename_suffix="") -> str:
@@ -1377,7 +1377,7 @@ class ProfessionalSearchPipeline:
                 
                 writer.writerow(row)
         
-        print(f"📁 Saved {len(final_results)} query results to: {output_path}")
+        print(f" Saved {len(final_results)} query results to: {output_path}")
         return output_path
     
     def run_integrated_cascade_pipeline(self, config_name=None, 
@@ -1396,7 +1396,7 @@ class ProfessionalSearchPipeline:
             
         Returns: (submission_csv_path, stage_1_json_path, track2_csv_path)
         """
-        print("🚀 INTEGRATED CASCADE + IMAGE SEARCH PIPELINE")
+        print(" INTEGRATED CASCADE + IMAGE SEARCH PIPELINE")
         print("=" * 80)
         start_time = time.time()
         
@@ -1414,27 +1414,27 @@ class ProfessionalSearchPipeline:
         self.save_config(output_dir, args, **config_params)
         
         # Step 1: ALWAYS run CASCADE text search first
-        print("🔍 Running CASCADE text search...")
+        print(" Running CASCADE text search...")
         cascade_csv_path, stage_1_json_path = self.text_search_pipeline(
             output_dir, "cascade", text_top_k, max_queries
         )
         
         # Step 2: Optional RRF with additional CSV files
         if additional_csv_files:
-            print(f"🔄 RRF CASCADE results with {len(additional_csv_files)} additional files...")
+            print(f" RRF CASCADE results with {len(additional_csv_files)} additional files...")
             
             # Combine cascade result with additional files
             all_csv_files = [cascade_csv_path] + additional_csv_files
             
             submission_csv_path = self.rrf_rerank_csvs(all_csv_files, adaptive_rrf, output_dir)
-            print(f"✅ RRF completed: CASCADE + {additional_csv_files}")
+            print(f" RRF completed: CASCADE + {additional_csv_files}")
         else:
-            print("📄 Using CASCADE results directly (no additional RRF)")
+            print(" Using CASCADE results directly (no additional RRF)")
             submission_csv_path = cascade_csv_path
         
         # Step 2: Image search (multi-model or single-model)
         if self.enable_multi_model:
-            print("🚀 Running MULTI-MODEL image search...")
+            print(" Running MULTI-MODEL image search...")
             final_results = self.multi_model_image_search_pipeline(
                 submission_csv_path,
                 max_articles_per_query=15,
@@ -1442,7 +1442,7 @@ class ProfessionalSearchPipeline:
                 final_top_k=15  # Increased from 10 to 15 for less aggressive filtering
             )
         else:
-            print("🖼️ Running SINGLE-MODEL image search...")
+            print(" Running SINGLE-MODEL image search...")
             final_results = self.image_search_pipeline(
                 submission_csv_path,
                 max_articles_per_query=15,
@@ -1458,14 +1458,14 @@ class ProfessionalSearchPipeline:
         
         total_time = time.time() - start_time
         
-        print("\n🎉 END-TO-END PIPELINE COMPLETED!")
+        print("\n END-TO-END PIPELINE COMPLETED!")
         print("=" * 80)
-        print(f"⏱️ Total time: {total_time/60:.1f} minutes")
-        print(f"📁 Output directory: {output_dir}")
-        print(f"📄 Submission CSV: {submission_csv_path}")
+        print(f"⏱ Total time: {total_time/60:.1f} minutes")
+        print(f" Output directory: {output_dir}")
+        print(f" Submission CSV: {submission_csv_path}")
         if stage_1_json_path:
-            print(f"📄 Stage 1 JSON: {stage_1_json_path}")
-        print(f"🖼️ Track 2 CSV: {track2_csv_path}")
+            print(f" Stage 1 JSON: {stage_1_json_path}")
+        print(f" Track 2 CSV: {track2_csv_path}")
         
         return submission_csv_path, stage_1_json_path, track2_csv_path
     
@@ -1623,19 +1623,19 @@ def main():
     
     # Validate additional CSV files 
     if args.additional_csv_files and len(args.additional_csv_files) < 1:
-        print("❌ At least 1 additional CSV file is required if specified")
+        print(" At least 1 additional CSV file is required if specified")
         sys.exit(1)
     
     # Validate JSON config
     if args.json_config and not os.path.exists(args.json_config):
-        print(f"❌ JSON config file not found: {args.json_config}")
+        print(f" JSON config file not found: {args.json_config}")
         sys.exit(1)
     
     # Print configuration mode
     if args.json_config:
-        print(f"🔧 CONFIGURATION MODE: JSON config from {args.json_config}")
+        print(f" CONFIGURATION MODE: JSON config from {args.json_config}")
     else:
-        print("🔧 CONFIGURATION MODE: Legacy parameter-based")
+        print(" CONFIGURATION MODE: Legacy parameter-based")
     
     # Determine RRF mode
     adaptive_rrf = True
@@ -1648,10 +1648,10 @@ def main():
     use_voting = False
     if args.use_voting:
         use_voting = True
-        print("🗳️ AGGREGATION MODE: VOTING")
+        print(" AGGREGATION MODE: VOTING")
     elif args.use_rrf:
         use_voting = False
-        print("🔄 AGGREGATION MODE: RRF")
+        print(" AGGREGATION MODE: RRF")
     
     # Determine sigmoid boosting mode
     use_sigmoid = True
@@ -1742,14 +1742,14 @@ def main():
             pipeline.save_config(output_dir, args, mode="cascade_text_search_only")
             
             csv_path, json_path = pipeline.text_search_pipeline(output_dir, "cascade", args.text_top_k, args.max_queries)
-            print(f"✨ CASCADE text search completed!")
-            print(f"📄 CSV: {csv_path}")
-            print(f"📄 JSON: {json_path}")
+            print(f" CASCADE text search completed!")
+            print(f" CSV: {csv_path}")
+            print(f" JSON: {json_path}")
             
         elif args.image_search_only:
             # Image search only (từ existing CSV files - NO CASCADE)
             if not args.csv_files:
-                print("❌ Image search only requires --csv-files parameter")
+                print(" Image search only requires --csv-files parameter")
                 sys.exit(1)
             
             output_dir = pipeline.create_output_directory(args.config_name)
@@ -1778,9 +1778,9 @@ def main():
             filename_suffix = args.config_name if args.config_name else "image_search"
             track2_path = pipeline.save_final_image_results(final_results, output_dir, filename_suffix)
             
-            print(f"✨ Image search completed!")
-            print(f"📄 Submission: {submission_csv_path}")
-            print(f"🖼️ Track2: {track2_path}")
+            print(f" Image search completed!")
+            print(f" Submission: {submission_csv_path}")
+            print(f" Track2: {track2_path}")
             
         else:
             # INTEGRATED CASCADE + IMAGE pipeline
@@ -1792,14 +1792,14 @@ def main():
                 adaptive_rrf=adaptive_rrf,
                 args=args  # Pass args for config saving
             )
-            print(f"✨ INTEGRATED CASCADE pipeline completed!")
-            print(f"📄 Submission: {submission_path}")
+            print(f" INTEGRATED CASCADE pipeline completed!")
+            print(f" Submission: {submission_path}")
             if stage1_path:
-                print(f"📄 Stage 1: {stage1_path}")
-            print(f"🖼️ Track 2: {track2_path}")
+                print(f" Stage 1: {stage1_path}")
+            print(f" Track 2: {track2_path}")
         
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f" Error: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":

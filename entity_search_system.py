@@ -7,7 +7,7 @@ import time
 import pandas as pd
 import argparse
 
-# 🎯 Optimal weights:
+#  Optimal weights:
 #    PERSON: 0.500 (was 4.3, -88.4%)
 #    CARDINAL: 3.263 (was 3.2, +2.0%)
 #    ORG: 0.500 (was 3.8, -86.8%)
@@ -31,21 +31,21 @@ class QuerySearchSystemEnhanced:
             "ORG": 3.8,         # ↓ Still important but not as frequent
             "GPE": 3.1,         # ↓ Countries, cities, venues
             "EVENT": 2.9,       # ↓ Tournaments, matches, competitions
-            "FAC": 2.5,         # ✓ Stadiums, facilities
-            "NORP": 2.2,        # ✓ Nationalities, affiliations
+            "FAC": 2.5,         #  Stadiums, facilities
+            "NORP": 2.2,        #  Nationalities, affiliations
             "TIME": 2.1,        # ↑ Match timing, duration
-            "DATE": 2.0,        # ✓ Historical context
+            "DATE": 2.0,        #  Historical context
             "PRODUCT": 2.0,     # ↓ Equipment, brands
             "LAW": 1.8,         # ↓ Rules, regulations
-            "LOC": 1.8,         # ✓ General locations  
+            "LOC": 1.8,         #  General locations  
             "WORK_OF_ART": 1.5, # ↓ Logos, designs
             "MONEY": 1.5,       # ↓ Prize money, transfers
             "PERCENT": 1.5,     # ↑ Statistics, win rates
             "QUANTITY": 1.3,    # ↑ Crowd sizes, distances
             "LANGUAGE": 1.2,    # ↓ Less relevant for visual
             "ORDINAL": 1.2,     # ↑ 1st place, 2nd half
-            "MISC": 1.0,        # ✓ Default
-            "DEFAULT": 1.0      # ✓ Fallback
+            "MISC": 1.0,        #  Default
+            "DEFAULT": 1.0      #  Fallback
         }
         # Reinforcement Learning
         # self.entity_weights = {
@@ -112,7 +112,7 @@ class QuerySearchSystemEnhanced:
         #     "LANGUAGE": 1.2,
         #     "ORDINAL": 1.2,
         #     "MISC": 1.0,
-        #     "DEFAULT": 1.0   # ✓ Fallback
+        #     "DEFAULT": 1.0   #  Fallback
         # }
     
     def get_all_queries(self, batch_size=100):
@@ -187,7 +187,7 @@ class QuerySearchSystemEnhanced:
                     )
                     
         except Exception as e:
-            print(f"❌ Lỗi lấy queries: {e}")
+            print(f" Lỗi lấy queries: {e}")
             return []
         
         return all_queries
@@ -332,11 +332,11 @@ class QuerySearchSystemEnhanced:
                 
                 return search_results
             else:
-                print(f"❌ Search error: {response.status_code}")
+                print(f" Search error: {response.status_code}")
                 return []
                 
         except Exception as e:
-            print(f"❌ Lỗi search: {e}")
+            print(f" Lỗi search: {e}")
             return []
     
     def auto_fill_empty_cells(self, df: pd.DataFrame, top_k: int = 10, fill_value: str = "#") -> pd.DataFrame:
@@ -379,16 +379,16 @@ class QuerySearchSystemEnhanced:
             max_queries: Giới hạn số queries để test (default: None = tất cả)
             postfix: Thêm postfix vào tên file
         """
-        print("🚀 BẮT ĐẦU ENHANCED QUERY SEARCH")
+        print(" BẮT ĐẦU ENHANCED QUERY SEARCH")
         print("=" * 50)
-        print(f"🎯 Top-K Articles: {top_k}")
-        print(f"🔧 Auto-fill Empty Cells: {auto_fill}")
-        print(f"📊 Articles Index: {self.articles_index}")
-        print(f"📋 Queries Index: {self.queries_index}")
+        print(f" Top-K Articles: {top_k}")
+        print(f" Auto-fill Empty Cells: {auto_fill}")
+        print(f" Articles Index: {self.articles_index}")
+        print(f" Queries Index: {self.queries_index}")
         if self.use_private:
-            print(f"🔒 Using PRIVATE queries")
+            print(f" Using PRIVATE queries")
         if max_queries:
-            print(f"📊 Max Queries Limit: {max_queries:,}")
+            print(f" Max Queries Limit: {max_queries:,}")
         
         start_time = time.time()
         
@@ -400,20 +400,20 @@ class QuerySearchSystemEnhanced:
             output_submission_csv = f"submission_{timestamp}.csv"
         
         # Lấy tất cả queries
-        print("📖 Loading all queries...")
+        print(" Loading all queries...")
         all_queries = self.get_all_queries()
         
         if not all_queries:
-            print("❌ Không có queries nào được tìm thấy!")
+            print(" Không có queries nào được tìm thấy!")
             return
         
         total_queries = len(all_queries)
         if max_queries and max_queries < total_queries:
             all_queries = all_queries[:max_queries]
             total_queries = max_queries
-            print(f"📊 Limited to first {max_queries:,} queries")
+            print(f" Limited to first {max_queries:,} queries")
         
-        print(f"📊 Total queries to process: {total_queries:,}")
+        print(f" Total queries to process: {total_queries:,}")
         
         # Search từng query
         submission_data = []
@@ -427,7 +427,7 @@ class QuerySearchSystemEnhanced:
                 elapsed = time.time() - start_time
                 avg_time = elapsed / i
                 eta = avg_time * (total_queries - i)
-                print(f"🔄 Progress: {i:,}/{total_queries:,} ({i/total_queries*100:.1f}%) - ETA: {eta/60:.1f}min")
+                print(f" Progress: {i:,}/{total_queries:,} ({i/total_queries*100:.1f}%) - ETA: {eta/60:.1f}min")
             
             query_id = query["query_id"]
             query_entities = query["entities"]
@@ -459,7 +459,7 @@ class QuerySearchSystemEnhanced:
                     submission_data.append(submission_row)
                     
             except Exception as e:
-                print(f"❌ Lỗi search query {query_id}: {e}")
+                print(f" Lỗi search query {query_id}: {e}")
                 failed_queries.append(query_id)
                 
                 # Tạo empty submission row cho failed query
@@ -481,18 +481,18 @@ class QuerySearchSystemEnhanced:
             # Auto-fill empty cells if requested
             if auto_fill:
                 submission_df = self.auto_fill_empty_cells(submission_df, top_k, fill_value="#")
-                print(f"🔧 Auto-filled empty cells with '#'")
+                print(f" Auto-filled empty cells with '#'")
             
             submission_df.to_csv(output_submission_csv, index=False)
-            print(f"✅ Saved submission CSV: {output_submission_csv}")
+            print(f" Saved submission CSV: {output_submission_csv}")
             
             # Verification
             empty_cells = (submission_df == "").sum().sum() if not auto_fill else (submission_df == "#").sum().sum()
             total_cells = submission_df.size
-            print(f"📊 Empty/filled cells: {empty_cells:,}/{total_cells:,} ({empty_cells/total_cells*100:.1f}%)")
+            print(f" Empty/filled cells: {empty_cells:,}/{total_cells:,} ({empty_cells/total_cells*100:.1f}%)")
             
         except Exception as e:
-            print(f"❌ Lỗi save submission CSV: {e}")
+            print(f" Lỗi save submission CSV: {e}")
         
         # Print statistics
         self._print_search_statistics(total_queries, successful_queries, total_articles_found, failed_queries, total_time, top_k)
@@ -507,33 +507,33 @@ class QuerySearchSystemEnhanced:
     def _print_search_statistics(self, total_queries: int, successful_queries: int, total_articles_found: int, 
                                failed_queries: List, total_time: float, top_k: int = 10):
         """Print search statistics"""
-        print("\n📊 ENHANCED SEARCH STATISTICS:")
+        print("\n ENHANCED SEARCH STATISTICS:")
         print("=" * 40)
         
-        print(f"📋 Total queries: {total_queries:,}")
-        print(f"✅ Có kết quả: {successful_queries:,} ({successful_queries/total_queries*100:.1f}%)")
-        print(f"❌ Không có kết quả: {total_queries - successful_queries:,}")
-        print(f"📰 Total articles found: {total_articles_found:,}")
-        print(f"📊 Avg articles per successful query: {total_articles_found/successful_queries:.1f}" if successful_queries > 0 else "📊 Avg articles per successful query: 0")
-        print(f"🎯 Top-K setting: {top_k}")
-        print(f"⏱️  Thời gian: {total_time/60:.1f} phút")
-        print(f"🚀 Tốc độ: {total_queries/total_time:.1f} queries/giây")
+        print(f" Total queries: {total_queries:,}")
+        print(f" Có kết quả: {successful_queries:,} ({successful_queries/total_queries*100:.1f}%)")
+        print(f" Không có kết quả: {total_queries - successful_queries:,}")
+        print(f" Total articles found: {total_articles_found:,}")
+        print(f" Avg articles per successful query: {total_articles_found/successful_queries:.1f}" if successful_queries > 0 else " Avg articles per successful query: 0")
+        print(f" Top-K setting: {top_k}")
+        print(f"⏱  Thời gian: {total_time/60:.1f} phút")
+        print(f" Tốc độ: {total_queries/total_time:.1f} queries/giây")
         
         if failed_queries:
-            print(f"⚠️  Failed queries: {len(failed_queries)} (examples: {failed_queries[:5]})")
+            print(f"  Failed queries: {len(failed_queries)} (examples: {failed_queries[:5]})")
     
     def search_sample_queries(self, sample_size=10, top_k=10):
         """Search một số queries mẫu để test"""
-        print(f"🔍 Testing với {sample_size} queries mẫu (Top-{top_k})")
+        print(f" Testing với {sample_size} queries mẫu (Top-{top_k})")
         print("=" * 40)
-        print(f"📊 Articles Index: {self.articles_index}")
-        print(f"📋 Queries Index: {self.queries_index}")
+        print(f" Articles Index: {self.articles_index}")
+        print(f" Queries Index: {self.queries_index}")
         if self.use_private:
-            print(f"🔒 Using PRIVATE queries")
+            print(f" Using PRIVATE queries")
         
         all_queries = self.get_all_queries()
         if not all_queries:
-            print("❌ Không có queries nào!")
+            print(" Không có queries nào!")
             return
         
         # Lấy sample
@@ -543,23 +543,23 @@ class QuerySearchSystemEnhanced:
             query_id = query["query_id"]
             query_entities = query["entities"]
             
-            print(f"\n🔍 Query {i}: {query_id}")
-            print(f"📝 Entities: {len(query_entities)}")
+            print(f"\n Query {i}: {query_id}")
+            print(f" Entities: {len(query_entities)}")
             
             # Show top 3 entities
             if query_entities:
                 top_entities = [f"{e.get('text', '')} ({e.get('label', '')})" for e in query_entities[:3]]
-                print(f"🏷️  Top entities: {', '.join(top_entities)}")
+                print(f"  Top entities: {', '.join(top_entities)}")
             
             # Search
             results = self.search_articles_for_query(query_entities, top_k=top_k)
             
             if results:
-                print(f"✅ Found {len(results)} articles")
+                print(f" Found {len(results)} articles")
                 for j, result in enumerate(results[:3], 1):  # Show top 3
                     print(f"   {j}. {result['article_id']} (score: {result['score']:.2f})")
             else:
-                print("❌ Không tìm thấy articles")
+                print(" Không tìm thấy articles")
 
 def main():
     parser = argparse.ArgumentParser(description="Enhanced Query Search System")
@@ -580,7 +580,7 @@ def main():
     
     args = parser.parse_args()
     
-    print("🔍 ENHANCED QUERY SEARCH SYSTEM")
+    print(" ENHANCED QUERY SEARCH SYSTEM")
     print("=" * 40)
     print(f"Mode: {args.mode}")
     print(f"ES Host: {args.es_host}")
@@ -609,8 +609,8 @@ def main():
             )
             
             if result:
-                print(f"\n🎉 HOÀN THÀNH!")
-                print(f"📁 File created: {result['files']['submission_csv']}")
+                print(f"\n HOÀN THÀNH!")
+                print(f" File created: {result['files']['submission_csv']}")
         
         elif args.mode == "sample":
             # Test với sample queries
@@ -620,7 +620,7 @@ def main():
             )
         
     except Exception as e:
-        print(f"❌ Lỗi: {e}")
+        print(f" Lỗi: {e}")
         exit(1)
 
 if __name__ == "__main__":

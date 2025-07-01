@@ -54,12 +54,12 @@ def debug_track2_file(result_set_name="pipeline_20250618_154004"):
     
     for file_path in mapping_files:
         if os.path.exists(file_path):
-            print(f"✅ {file_path} exists")
+            print(f" {file_path} exists")
             # Check file size
             size = os.path.getsize(file_path) / (1024*1024)  # MB
             print(f"   Size: {size:.2f} MB")
         else:
-            print(f"❌ {file_path} missing")
+            print(f" {file_path} missing")
     
     # Check image directory
     print(f"\n=== Checking image directories ===")
@@ -72,7 +72,7 @@ def debug_track2_file(result_set_name="pipeline_20250618_154004"):
     
     for dir_path in possible_dirs:
         if os.path.exists(dir_path):
-            print(f"✅ {dir_path} exists")
+            print(f" {dir_path} exists")
             # Count image files
             try:
                 img_files = [f for f in os.listdir(dir_path) if f.endswith('.jpg')]
@@ -80,7 +80,7 @@ def debug_track2_file(result_set_name="pipeline_20250618_154004"):
             except:
                 print(f"   Could not list files")
         else:
-            print(f"❌ {dir_path} not found")
+            print(f" {dir_path} not found")
 
 def test_image_lookup():
     """Test image to article mapping"""
