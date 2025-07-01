@@ -1,0 +1,20 @@
+{
+  "Database_Flickr30k_Base": {
+    "weight": 1.0,
+    "query_collections": [
+      {"Query_Flickr30k_Base": 1.0}
+    ]
+  },
+  "Database_Flickr30k_Large": {
+    "weight": 1.0,
+    "query_collections": [
+      {"Query_Flickr30k_Large": 1.0}
+    ]
+  },
+  "Database_Laion_H14": {
+    "weight": 1.0,
+    "query_collections": [
+      {"Query_Laion_H14": 1.0}
+    ]
+  }
+} 

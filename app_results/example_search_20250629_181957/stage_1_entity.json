@@ -1,0 +1,90 @@
+{
+  "search_results": [
+    {
+      "query_id": "Q001",
+      "query_text": "Football players celebrating goal in stadium",
+      "entities_found": 7,
+      "articles_retrieved": 17,
+      "search_score": 0.611
+    },
+    {
+      "query_id": "Q002",
+      "query_text": "Basketball game with players jumping",
+      "entities_found": 8,
+      "articles_retrieved": 18,
+      "search_score": 0.923
+    },
+    {
+      "query_id": "Q003",
+      "query_text": "Soccer match with crowd in background",
+      "entities_found": 6,
+      "articles_retrieved": 15,
+      "search_score": 0.656
+    },
+    {
+      "query_id": "Q004",
+      "query_text": "Tennis player serving the ball",
+      "entities_found": 7,
+      "articles_retrieved": 24,
+      "search_score": 0.679
+    },
+    {
+      "query_id": "Q005",
+      "query_text": "Olympic ceremony with athletes marching",
+      "entities_found": 5,
+      "articles_retrieved": 22,
+      "search_score": 0.658
+    },
+    {
+      "query_id": "Q006",
+      "query_text": "Baseball pitcher throwing fastball",
+      "entities_found": 4,
+      "articles_retrieved": 16,
+      "search_score": 0.652
+    },
+    {
+      "query_id": "Q007",
+      "query_text": "Swimming competition in olympic pool",
+      "entities_found": 8,
+      "articles_retrieved": 22,
+      "search_score": 0.607
+    },
+    {
+      "query_id": "Q008",
+      "query_text": "Golf tournament with spectators watching",
+      "entities_found": 5,
+      "articles_retrieved": 20,
+      "search_score": 0.901
+    },
+    {
+      "query_id": "Q009",
+      "query_text": "Boxing match with referee in ring",
+      "entities_found": 6,
+      "articles_retrieved": 18,
+      "search_score": 0.904
+    },
+    {
+      "query_id": "Q010",
+      "query_text": "Ice hockey players fighting for puck",
+      "entities_found": 6,
+      "articles_retrieved": 25,
+      "search_score": 0.625
+    }
+  ],
+  "files": {
+    "submission_csv": "submission_entity.csv"
+  },
+  "pipeline_info": {
+    "search_type": "enhanced_entity_search",
+    "top_k": 30,
+    "max_queries": 10,
+    "filename_suffix": "entity",
+    "timestamp": "2025-06-29T18:19:57.069010"
+  },
+  "statistics": {
+    "total_queries": 10,
+    "successful_searches": 10,
+    "avg_entities_per_query": 5.2,
+    "avg_articles_per_query": 20.1
+  }
+}

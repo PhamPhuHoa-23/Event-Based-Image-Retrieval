@@ -1,0 +1,29 @@
+=== PROFESSIONAL SEARCH PIPELINE CONFIG ===
+Generated: 2025-06-29 18:19:57
+
+=== PIPELINE CONFIGURATION ===
+search_type: example_entity_search
+pipeline_mode: combined_search
+use_voting: true
+use_entity_weights: true
+top_k: 30
+max_queries: 10
+
+=== ENTITY WEIGHTS ===
+PERSON: 4.3
+CARDINAL: 3.5
+ORG: 3.8
+GPE: 3.1
+EVENT: 2.9
+FAC: 2.5
+NORP: 2.2
+
+=== FILES GENERATED ===
+submission_entity.csv: Stage 1 text search results
+track2_combined.csv: Stage 2 image search results
+stage_1_entity.json: Detailed search metadata
+config.txt: This configuration file
+
+=== EXAMPLE DATA NOTICE ===
+This is example data generated for testing purposes.
+Real search results will contain actual article and image IDs.

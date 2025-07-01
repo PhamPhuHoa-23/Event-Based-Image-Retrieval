@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 ElasticSearch System - Image Retrieval Visualizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --dark-bg: #0f0f23;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-primary: #2d3748;
+            --text-secondary: #718096;
+            --border-radius: 20px;
+            --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="0.5" fill="rgba(255,255,255,0.03)"/><circle cx="50" cy="10" r="0.8" fill="rgba(255,255,255,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+
+        .flash-messages {
+            margin-bottom: 30px;
+        }
+
+        .flash-message {
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            border: none;
+            backdrop-filter: blur(20px);
+            animation: slideInRight 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flash-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            z-index: -1;
+        }
+
+        .flash-success {
+            background: var(--success-gradient);
+            color: white;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .flash-error {
+            background: var(--warning-gradient);
+            color: white;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .flash-warning {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .main-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 0.8s ease 0.2s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--primary-gradient);
+            border-radius: var(--border-radius);
+            z-index: -1;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title i {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.2rem;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 5px;
+            gap: 5px;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            background: transparent;
+            color: var(--text-primary);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .tab.active {
+            background: white;
+            box-shadow: var(--shadow-soft);
+            transform: translateY(-2px);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            font-size: 1rem;
+            background: white;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            appearance: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .form-select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-select:hover {
+            border-color: #667eea;
+            transform: translateY(-1px);
+        }
+
+        .result-set-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .file-indicator {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin: 2px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .file-required {
+            background: rgba(76, 175, 80, 0.2);
+            color: #2e7d32;
+        }
+
+        .file-optional {
+            background: rgba(255, 193, 7, 0.2);
+            color: #f57c00;
+        }
+
+        .file-missing {
+            background: rgba(244, 67, 54, 0.2);
+            color: #c62828;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .queries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .query-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .query-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: #667eea;
+        }
+
+        .query-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+
+        .query-id {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .query-preview {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .main-card {
+                padding: 20px;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .queries-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 ElasticSearch System</h1>
+            <p>Advanced Image Retrieval & Analysis Platform</p>
+        </div>
+        
+        {% if get_flashed_messages() %}
+                <div class="flash-messages">
+            {% for category, message in get_flashed_messages(with_categories=true) %}
+                        <div class="flash-message flash-{{ category }}">
+                <i class="fas fa-{% if category == 'success' %}check-circle{% elif category == 'error' %}exclamation-triangle{% else %}info-circle{% endif %}"></i>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        
+        <div class="main-card">
+            <h2 class="section-title">
+                <i class="fas fa-cogs"></i>
+                Configuration
+            </h2>
+            
+            <!-- Dataset Selector -->
+            <div style="margin-bottom: 30px; padding: 20px; background: rgba(102, 126, 234, 0.1); border-radius: 15px; border: 2px solid rgba(102, 126, 234, 0.2);">
+                <form action="{{ url_for('switch_dataset') }}" method="post" style="display: flex; align-items: center; gap: 20px;">
+                    <div style="flex: 1;">
+                        <label for="dataset_type" style="display: block; font-weight: 600; color: var(--text-primary); margin-bottom: 10px; font-size: 1rem;">
+                            <i class="fas fa-database"></i> Query Dataset
+                        </label>
+                        <select name="dataset_type" id="dataset_type" class="form-select" onchange="this.form.submit()">
+                            <option value="public" {% if current_dataset == 'public' %}selected{% endif %}>
+                                🌍 Public Dataset (3000 queries)
+                            </option>
+                            <option value="private" {% if current_dataset == 'private' %}selected{% endif %}>
+                                🔒 Private Dataset (3187 queries)
+                            </option>
+                        </select>
+                    </div>
+                    <div style="margin-top: 25px;">
+                        <div style="background: white; padding: 10px 15px; border-radius: 10px; font-size: 0.9rem; font-weight: 600; color: #667eea;">
+                            Current: {{ current_dataset.title() }}
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Tabs for different configuration modes -->
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('result-sets')">
+                    <i class="fas fa-folder-open"></i> Result Sets
+                </button>
+                <button class="tab" onclick="switchTab('legacy-files')">
+                    <i class="fas fa-file-csv"></i> Legacy CSV Files
+                </button>
+            </div>
+
+            <!-- Result Sets Tab -->
+            <div id="result-sets" class="tab-content active">
+                <form action="{{ url_for('set_result_set') }}" method="post">
+                <div class="form-grid">
+                    <div class="form-group">
+                            <label for="result_set">
+                                <i class="fas fa-database"></i> Select Result Set
+                            </label>
+                            <select name="result_set" id="result_set" class="form-select" onchange="updateResultSetInfo()">
+                                <option value="">Select a result set...</option>
+                                {% for result_set_name, files in result_sets.items() %}
+                                <option value="{{ result_set_name }}" 
+                                        {% if result_set_name == current_result_set %}selected{% endif %}
+                                        data-submission="{{ files.submission }}"
+                                        data-track2="{{ files.track2_submission }}"
+                                        data-details="{{ files.stage1_details }}">
+                                    {{ result_set_name }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                            <div id="result-set-info" class="result-set-info" style="display: none;">
+                                <div><strong>Files in this result set:</strong></div>
+                                <div id="file-indicators"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="display_mode_rs">
+                                <i class="fas fa-eye"></i> Display Mode
+                            </label>
+                            <select name="display_mode" id="display_mode_rs" class="form-select">
+                                <option value="stage1" {% if current_mode == 'stage1' %}selected{% endif %}>
+                                    Stage 1 View (Articles + Entities)
+                                </option>
+                                <option value="image" {% if current_mode == 'image' %}selected{% endif %}>
+                                    Image View (Top Images)
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Load Result Set
+                    </button>
+                </form>
+            </div>
+
+            <!-- Legacy Files Tab -->
+            <div id="legacy-files" class="tab-content">
+                <form action="{{ url_for('set_files') }}" method="post">
+                    <div class="form-grid">
+                    <div class="form-group">
+                            <label for="submission_file">
+                                <i class="fas fa-file-upload"></i> Submission File (Stage 1 Results)
+                            </label>
+                            <select name="submission_file" id="submission_file" class="form-select">
+                                <option value="">Select submission file...</option>
+                                {% for file in csv_files.submission %}
+                                    <option value="{{ file }}" {% if file == current_submission %}selected{% endif %}>{{ file }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="query_file">
+                                <i class="fas fa-search"></i> Query File
+                            </label>
+                            <select name="query_file" id="query_file" class="form-select">
+                                <option value="">Select query file...</option>
+                                {% for file in csv_files.query %}
+                                <option value="{{ file }}" {% if file == current_query %}selected{% endif %}>{{ file }}</option>
+                                {% endfor %}
+                            </select>
+            </div>
+                    
+                    <div class="form-group">
+                            <label for="stage1_file">
+                                <i class="fas fa-layer-group"></i> Stage 1 File (Optional)
+                            </label>
+                            <select name="stage1_file" id="stage1_file" class="form-select">
+                                <option value="">Select stage1 file...</option>
+                                {% for file in csv_files.stage1 %}
+                                    <option value="{{ file }}" {% if file == current_stage1 %}selected{% endif %}>{{ file }}</option>
+                                {% endfor %}
+                            </select>
+                </div>
+                
+                        <div class="form-group">
+                            <label for="display_mode_legacy">
+                                <i class="fas fa-eye"></i> Display Mode
+                        </label>
+                            <select name="display_mode" id="display_mode_legacy" class="form-select">
+                                <option value="image" {% if current_mode == 'image' %}selected{% endif %}>
+                                    Image View (Top Images)
+                                </option>
+                                <option value="stage1" {% if current_mode == 'stage1' %}selected{% endif %}>
+                                    Stage 1 View (Articles)
+                                </option>
+                            </select>
+                    </div>
+                </div>
+                
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-upload"></i>
+                        Load Legacy Files
+                    </button>
+                </form>
+                </div>
+        </div>
+        
+        {% if query_ids %}
+        <div class="main-card">
+                <h2 class="section-title">
+                    <i class="fas fa-list"></i>
+                    Available Queries ({{ query_ids|length }})
+                </h2>
+                
+                <div class="queries-grid">
+                    {% for query_id in query_ids %}
+                <div class="query-card" onclick="window.location.href='{{ url_for('show_query', query_id=query_id) }}'">
+                    <div class="query-id">{{ query_id }}</div>
+                    <div class="query-preview">Click to view results...</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+
+        function updateResultSetInfo() {
+            const select = document.getElementById('result_set');
+            const info = document.getElementById('result-set-info');
+            const indicators = document.getElementById('file-indicators');
+            
+            if (select.value) {
+                const option = select.selectedOptions[0];
+                const submission = option.dataset.submission;
+                const track2 = option.dataset.track2;
+                const details = option.dataset.details;
+                
+                let html = '';
+                
+                if (submission && submission !== 'None') {
+                    html += '<span class="file-indicator file-required">✓ Stage 1 Results</span>';
+                } else {
+                    html += '<span class="file-indicator file-missing">✗ Stage 1 Results (Required)</span>';
+                }
+                
+                if (track2 && track2 !== 'None') {
+                    html += '<span class="file-indicator file-optional">✓ Track 2 Images</span>';
+                } else {
+                    html += '<span class="file-indicator file-optional">- Track 2 Images (Optional)</span>';
+                }
+                
+                if (details && details !== 'None') {
+                    html += '<span class="file-indicator file-required">✓ Entity Details</span>';
+                } else {
+                    html += '<span class="file-indicator file-missing">✗ Entity Details (Required)</span>';
+                }
+                
+                indicators.innerHTML = html;
+                info.style.display = 'block';
+            } else {
+                info.style.display = 'none';
+            }
+        }
+
+        // Initialize result set info on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateResultSetInfo();
+        });
+    </script>
+</body>
+</html> 

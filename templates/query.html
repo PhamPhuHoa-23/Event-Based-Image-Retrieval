@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖼️ Image View - {{ query_id }} | ElasticSearch System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-primary: #2d3748;
+            --text-secondary: #718096;
+            --border-radius: 20px;
+            --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="0.5" fill="rgba(255,255,255,0.03)"/><circle cx="50" cy="10" r="0.8" fill="rgba(255,255,255,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .navigation {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            padding: 15px 25px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            animation: slideInLeft 0.8s ease;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .query-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 0.8s ease 0.2s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .query-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--warning-gradient);
+            border-radius: var(--border-radius);
+            z-index: -1;
+        }
+
+        .query-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .query-title i {
+            background: var(--warning-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .query-text {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 10px;
+            border-left: 4px solid #fa709a;
+        }
+
+        .summary, .concise {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 4px solid #f093fb;
+        }
+
+        .summary {
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.05) 100%);
+        }
+
+        .concise {
+            background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.05) 100%);
+            border-left-color: #4facfe;
+        }
+
+        .entity-section {
+            margin-top: 20px;
+        }
+
+        .entity-section h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .entity-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .entity {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .entity:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .entity-PERSON { background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%); color: #0c5460; }
+        .entity-ORG { background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); color: #155724; }
+        .entity-GPE { background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); color: #856404; }
+        .entity-DATE { background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); color: #721c24; }
+        .entity-EVENT { background: linear-gradient(135deg, #e2e3e5 0%, #d6d8db 100%); color: #383d41; }
+        .entity-NORP { background: linear-gradient(135deg, #cce5ff 0%, #b8daff 100%); color: #004085; }
+        .entity-default { background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%); color: #555; }
+
+        .view-options {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            animation: slideInRight 0.8s ease 0.3s both;
+        }
+
+        .view-option {
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid transparent;
+        }
+
+        .view-option.active {
+            background: var(--warning-gradient);
+            color: white;
+            box-shadow: 0 5px 15px rgba(250, 112, 154, 0.4);
+        }
+
+        .view-option:not(.active) {
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--text-primary);
+        }
+
+        .view-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .images-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title i {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.2rem;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .image-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .image-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--warning-gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            z-index: 2;
+        }
+
+        .image-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(250, 112, 154, 0.3);
+        }
+
+        .image-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .rank-overlay {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--warning-gradient);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(250, 112, 154, 0.4);
+            z-index: 1;
+        }
+
+        .image-info {
+            padding: 20px;
+        }
+
+        .image-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .image-details {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .article-preview {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--primary-gradient);
+        }
+
+        .article-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        .article-date {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            margin-bottom: 8px;
+        }
+
+        .url-button {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .url-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .query-card, .images-section { padding: 20px; }
+            .navigation, .view-options { flex-direction: column; }
+            .image-grid { grid-template-columns: 1fr; }
+            .view-options { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-images"></i> Image Gallery</h1>
+        </div>
+        
+        <div class="navigation">
+            <a href="{{ url_for('index') }}" class="nav-link">
+                <i class="fas fa-home"></i> Home
+            </a>
+            {% if prev_query_id %}
+                <a href="{{ url_for('show_query', query_id=prev_query_id) }}" class="nav-link">
+                    <i class="fas fa-chevron-left"></i> Previous Query
+                </a>
+            {% endif %}
+            {% if next_query_id %}
+                <a href="{{ url_for('show_query', query_id=next_query_id) }}" class="nav-link">
+                    Next Query <i class="fas fa-chevron-right"></i>
+                </a>
+            {% endif %}
+        </div>
+        
+        <div class="query-card">
+            <h2 class="query-title">
+                <i class="fas fa-search"></i>
+                Query {{ query_id }}
+            </h2>
+            
+            <div class="query-text">
+                <strong><i class="fas fa-quote-left"></i> Query:</strong> {{ query_text }}
+            </div>
+            
+            {% if summary %}
+                <div class="summary">
+                    <strong><i class="fas fa-file-alt"></i> Summary:</strong> {{ summary }}
+                </div>
+            {% endif %}
+            
+            {% if concise %}
+                <div class="concise">
+                    <strong><i class="fas fa-compress"></i> Concise:</strong> {{ concise }}
+                </div>
+            {% endif %}
+            
+            <div class="entity-section">
+                <h4><i class="fas fa-tags"></i> Query Entities:</h4>
+                <div class="entity-list">
+                    {% if query_entities %}
+                        {% for entity in query_entities %}
+                            <span class="entity entity-{{ entity.label|default('default') }}">
+                                {{ entity.text }} <small>({{ entity.label }})</small>
+                            </span>
+                        {% endfor %}
+                    {% else %}
+                        <span class="entity entity-default">No entities found</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="view-options">
+            <a href="{{ url_for('show_query', query_id=query_id) }}" class="view-option active">
+                <i class="fas fa-images"></i> Image View
+            </a>
+            <a href="{{ url_for('article_view', query_id=query_id) }}" class="view-option">
+                <i class="fas fa-newspaper"></i> Article View
+            </a>
+            {% if display_mode == 'stage1' %}
+                <a href="{{ url_for('stage1_view', query_id=query_id) }}" class="view-option">
+                    <i class="fas fa-target"></i> Stage 1 View
+                </a>
+            {% endif %}
+        </div>
+        
+        <div class="images-section">
+            <h2 class="section-title">
+                <i class="fas fa-photo-video"></i>
+                Top Retrieved Images
+            </h2>
+            
+            {% if image_info %}
+                <div class="image-grid">
+                    {% for image in image_info %}
+                        <div class="image-card">
+                            <div class="image-wrapper">
+                                <img src="{{ image.image_path }}" alt="Image {{ image.image_id }}" loading="lazy">
+                                <div class="rank-overlay">#{{ image.rank }}</div>
+                            </div>
+                            <div class="image-info">
+                                <div class="image-title">{{ image.image_id }}</div>
+                                <div class="image-details">
+                                    <strong>Article:</strong> {{ image.article_id }}
+                                </div>
+                                
+                                {% if image.article_title %}
+                                    <div class="article-title">{{ image.article_title }}</div>
+                                {% endif %}
+                                
+                                {% if image.article_date %}
+                                    <div class="article-date">{{ image.article_date }}</div>
+                                {% endif %}
+                                
+                                {% if image.article_preview %}
+                                    <div class="article-preview">{{ image.article_preview }}</div>
+                                {% endif %}
+                                
+                                <a href="{{ image.article_url }}" target="_blank" class="url-button">
+                                    <i class="fas fa-external-link-alt"></i> Open Article
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <i class="fas fa-image"></i>
+                    <h3>No Images Found</h3>
+                    <p>No images found for this query.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html> 

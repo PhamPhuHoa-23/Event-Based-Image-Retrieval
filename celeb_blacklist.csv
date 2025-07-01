@@ -1,0 +1,3270 @@
+person_name,total_occurrences,articles_count,average_confidence,confidence_scores_count
+Biden,30477,7617,,0
+Brexit,28370,9002,,0
+Johnson,26598,6680,,0
+Donald Trump,16033,12354,,0
+Covid,15676,9314,,0
+Putin,11889,3592,,0
+Sunak,10761,3437,,0
+Joe Biden,10085,8253,,0
+Boris Johnson,9541,7343,,0
+Tory,9513,5589,,0
+Starmer,8557,2618,,0
+Harris,7880,1806,,0
+Williams,7512,2449,,0
+Jones,7031,2108,,0
+Trump,6691,4256,,0
+Morrison,6305,2143,,0
+Rishi Sunak,6099,5167,,0
+Smith,5980,2171,,0
+Djokovic,5665,1134,,0
+Tik Tok,5299,2491,,0
+Klopp,5205,1935,,0
+Vladimir Putin,5127,4372,,0
+Queen,4942,2102,,0
+Hamilton,4929,1330,,0
+Murray,4667,1266,,0
+Keir Starmer,4632,3822,,0
+Guardiola,4415,1386,,0
+Netanyahu,4286,1129,,0
+Albanese,4268,1502,,0
+Chelsea,4166,2495,,0
+James,4133,1733,,0
+Taylor,4043,1378,,0
+Nadal,4027,885,,0
+Khan,3899,1001,,0
+Hunt,3855,1350,,0
+Brown,3723,1248,,0
+Harry,3693,1238,,0
+Lee,3556,1141,,0
+Messi,3429,992,,0
+Corbyn,3416,1150,,0
+Oscar,3384,2171,,0
+Thomas,3328,1116,,0
+Obama,3229,1611,,0
+Anderson,3208,1077,,0
+Charles,3199,1490,,0
+Federer,3187,785,,0
+Dutton,3057,839,,0
+David,2852,1476,,0
+John,2839,1280,,0
+Scott Morrison,2829,2347,,0
+Tottenham,2823,1991,,0
+Wilson,2812,1043,,0
+Jackson,2614,874,,0
+Epstein,2606,335,,0
+Ronaldo,2584,919,,0
+Theresa,2583,2190,,0
+Cameron,2425,887,,0
+Jeremy Corbyn,2424,1930,,0
+Donald Trump’s,2415,2293,,0
+Cohen,2398,470,,0
+Kelly,2376,811,,0
+Anthony Albanese,2364,2084,,0
+Emmanuel Macron,2358,2109,,0
+Kane,2355,785,,0
+Bolsonaro,2334,439,,0
+Farage,2331,672,,0
+Stokes,2317,707,,0
+Walker,2264,737,,0
+Kamala Harris,2246,1788,,0
+Francis,2239,797,,0
+Novak Djokovic,2235,1618,,0
+Lewis,2231,904,,0
+Mc Ilroy,2205,593,,0
+Sanders,2183,517,,0
+Kim,2181,678,,0
+Boris,2112,1073,,0
+Shakespeare,2105,1112,,0
+Kennedy,2092,547,,0
+Higgins,2084,430,,0
+Barack Obama,2081,1883,,0
+Martin,2070,883,,0
+Meghan,2061,615,,0
+Boris Johnson’s,2057,1874,,0
+Adams,2042,646,,0
+Xi,2025,629,,0
+Evans,2017,775,,0
+Liz Truss,2014,1730,,0
+Michael,2007,946,,0
+Reeves,2003,677,,0
+Paul,2003,954,,0
+Arteta,1999,621,,0
+Cummings,1922,407,,0
+Robinson,1918,677,,0
+Jeremy Hunt,1907,1714,,0
+Hill,1855,634,,0
+David Cameron,1851,1657,,0
+Moore,1849,683,,0
+Davis,1849,740,,0
+Burnley,1836,991,,0
+Merkel,1806,495,,0
+Watson,1789,617,,0
+Miller,1781,635,,0
+Down,1778,1654,,0
+Navalny,1778,278,,0
+Scott,1762,750,,0
+George,1756,938,,0
+Roger Federer,1747,1218,,0
+Andrews,1727,631,,0
+White,1725,737,,0
+Macron,1719,829,,0
+Murphy,1690,668,,0
+Benjamin Netanyahu,1679,1555,,0
+Williamson,1678,532,,0
+Matildas,1675,546,,0
+Mc Laren,1671,742,,0
+Peter,1665,806,,0
+Edwards,1658,515,,0
+Mc Carthy,1658,561,,0
+Mitchell,1653,625,,0
+Bolton,1645,751,,0
+Volodymyr Zelenskiy,1625,1532,,0
+Jesus,1625,952,,0
+Lewis Hamilton,1624,1170,,0
+Gove,1623,600,,0
+Max,1623,728,,0
+Roberts,1611,590,,0
+Wagner,1604,555,,0
+Rafael Nadal,1603,1224,,0
+Cristiano Ronaldo,1602,1264,,0
+Clark,1578,499,,0
+Patel,1574,595,,0
+Peter Dutton,1562,1304,,0
+Wright,1560,516,,0
+Hayes,1558,443,,0
+Ryan,1550,685,,0
+Pep Guardiola,1548,1404,,0
+Vettel,1546,439,,0
+Michael Gove,1545,1374,,0
+Woods,1544,565,,0
+Andrew,1542,565,,0
+Jack,1536,770,,0
+Serena Williams,1535,1048,,0
+Barbie,1534,454,,0
+Ferguson,1532,660,,0
+Maguire,1529,486,,0
+Lionel Messi,1522,1241,,0
+Andy Murray,1521,1116,,0
+Rodgers,1518,436,,0
+Raab,1516,434,,0
+George Floyd,1514,1072,,0
+Clinton,1500,654,,0
+Pell,1498,127,,0
+Morgan,1488,641,,0
+Russell,1488,538,,0
+William,1484,719,,0
+Elon Musk,1477,1260,,0
+Tom,1461,740,,0
+Brady,1458,415,,0
+Ali,1440,497,,0
+Murdoch,1438,459,,0
+Powell,1432,496,,0
+Harry Kane,1418,1282,,0
+Xi Jinping,1413,1235,,0
+Graham,1410,578,,0
+Henry,1406,584,,0
+Stewart,1401,495,,0
+Salah,1395,481,,0
+Haley,1391,297,,0
+Allen,1384,477,,0
+Solskjær,1375,392,,0
+Vance,1375,292,,0
+Hunter,1369,701,,0
+Richard,1363,679,,0
+Wong,1357,407,,0
+Braverman,1351,475,,0
+Silva,1348,647,,0
+Modi,1345,356,,0
+Joe,1328,756,,0
+Covid-19,1326,1210,,0
+Jordan,1319,546,,0
+Wigan,1318,611,,0
+Villa,1310,606,,0
+Nigel Farage,1308,1084,,0
+Giuliani,1307,270,,0
+Borthwick,1307,393,,0
+Aston Villa,1303,1112,,0
+Carroll,1296,306,,0
+Blair,1277,579,,0
+Musk,1274,535,,0
+Cooper,1274,574,,0
+Robert,1265,518,,0
+Farrell,1260,513,,0
+Collins,1259,520,,0
+Matt Hancock,1256,1147,,0
+Lampard,1239,415,,0
+Hillary Clinton,1238,1067,,0
+Young,1237,612,,0
+Victoria,1237,953,,0
+Darwin,1236,748,,0
+Theresa May,1236,1110,,0
+Kate,1235,625,,0
+Pelosi,1230,406,,0
+Hitler,1225,747,,0
+Howe,1222,379,,0
+Sharapova,1222,325,,0
+Santos,1212,368,,0
+Chris,1204,668,,0
+Warren,1201,376,,0
+Floyd,1198,373,,0
+Porter,1187,347,,0
+Palmer,1183,397,,0
+Carter,1182,372,,0
+Rachel Reeves,1182,1043,,0
+Mary,1181,602,,0
+Angela Merkel,1178,1006,,0
+Joyce,1177,348,,0
+Oscars,1169,720,,0
+Rafah,1165,464,,0
+Gray,1164,404,,0
+Javid,1157,448,,0
+Ardern,1155,313,,0
+Willis,1152,261,,0
+Lawrence,1149,461,,0
+Carlson,1140,232,,0
+Reynolds,1136,363,,0
+Bailey,1134,541,,0
+Ben Stokes,1132,964,,0
+Bennett,1131,379,,0
+Cook,1123,543,,0
+Robertson,1121,427,,0
+Baker,1121,413,,0
+Sadiq Khan,1120,974,,0
+Bush,1116,494,,0
+Rice,1115,444,,0
+Ron De Santis,1114,951,,0
+Thatcher,1113,531,,0
+Tony Blair,1108,993,,0
+Tony,1108,594,,0
+Tiger Woods,1104,827,,0
+John Lewis,1104,559,,0
+Rory Mc Ilroy,1103,858,,0
+Holmes,1103,253,,0
+Lazio,1099,556,,0
+Marcus Rashford,1096,985,,0
+Erik,1095,950,,0
+Conte,1090,325,,0
+Pochettino,1089,389,,0
+Alex,1089,494,,0
+Roland Garros,1085,710,,0
+Alonso,1084,391,,0
+Sam,1078,556,,0
+Simon,1078,537,,0
+Duchess,1076,645,,0
+Margaret Thatcher,1074,950,,0
+Mc Donald’s,1073,593,,0
+Diana,1071,503,,0
+Sarah,1069,574,,0
+Sajid Javid,1059,961,,0
+Tory MPs,1055,908,,0
+Erdogan,1041,204,,0
+Weinstein,1034,182,,0
+Saracens,1033,417,,0
+Nancy Pelosi,1032,920,,0
+Carlsen,1025,176,,0
+Foster,1020,366,,0
+Fox,1019,550,,0
+Devon,1016,782,,0
+Gareth Southgate,1015,943,,0
+Gordon,1012,485,,0
+Priti Patel,1010,913,,0
+Maradona,1007,210,,0
+Davies,1007,529,,0
+Rooney,1000,261,,0
+Dominic Raab,996,909,,0
+Frank,993,483,,0
+Brooks,989,314,,0
+Suella Braverman,984,877,,0
+Ben,984,582,,0
+Lula,984,230,,0
+Kent,983,735,,0
+Elizabeth,981,567,,0
+Rose,981,470,,0
+Prince Harry,980,605,,0
+Gallagher,976,401,,0
+Bernie Sanders,973,840,,0
+Emery,971,335,,0
+Blinken,971,418,,0
+Assad,971,300,,0
+Garcia,970,306,,0
+Mark,970,532,,0
+Mike Pence,969,865,,0
+Li,968,287,,0
+Catherine,966,449,,0
+Maria,962,409,,0
+bush,957,702,,0
+Ratcliffe,956,296,,0
+Wallace,948,361,,0
+Howard,948,488,,0
+Joshua,944,216,,0
+Trudeau,944,288,,0
+Neville,943,331,,0
+Butler,931,362,,0
+Ahmed,928,301,,0
+Saka,925,386,,0
+Yousaf,921,208,,0
+Antony Blinken,921,874,,0
+Serena,915,427,,0
+Abramovich,912,206,,0
+Nelson,909,412,,0
+Grant,909,332,,0
+Mauricio Pochettino,905,860,,0
+Truss,905,478,,0
+Blackburn,903,564,,0
+Perry,895,288,,0
+Sebastian Vettel,891,631,,0
+Rayner,889,307,,0
+Patrick,888,404,,0
+Pedro,886,660,,0
+Daniel,881,450,,0
+Thompson,876,404,,0
+Ward,875,365,,0
+Andy,875,429,,0
+Bowen,875,403,,0
+Verstappen,872,329,,0
+Baldwin,870,178,,0
+Norris,863,251,,0
+Adam,862,396,,0
+Ross,858,375,,0
+Barr,856,241,,0
+Eddie Jones,856,766,,0
+Bill,850,557,,0
+Alice,847,464,,0
+Mikel Arteta,847,816,,0
+Bannon,845,173,,0
+Alex Ferguson,841,738,,0
+Joe Root,839,745,,0
+Mc Connell,833,295,,0
+Newsom,827,250,,0
+Salvini,827,221,,0
+Anna,825,393,,0
+Oliver,824,327,,0
+Medvedev,822,220,,0
+Harrison,819,347,,0
+Parker,813,337,,0
+Haigh,812,110,,0
+Frank Lampard,811,734,,0
+Potter,806,254,,0
+Daniels,804,235,,0
+Windrush,803,377,,0
+Cox,803,323,,0
+Bill Clinton,802,711,,0
+Rishi Sunak’s,799,763,,0
+Singh,798,258,,0
+Bale,795,260,,0
+Steve,791,436,,0
+Beatles,791,529,,0
+Lukashenko,784,188,,0
+Bruce,781,328,,0
+Dominic Cummings,780,635,,0
+Mickelson,776,189,,0
+Prince William,775,556,,0
+Zuckerberg,773,287,,0
+Rudd,772,274,,0
+Elliott,770,327,,0
+Blake,770,202,,0
+Begum,770,153,,0
+Freeman,769,260,,0
+Mc Donald,767,296,,0
+Turner,766,371,,0
+Son,765,352,,0
+Grant Shapps,763,703,,0
+Ashley,762,268,,0
+Kevin,760,339,,0
+Joe Biden’s,758,724,,0
+Jacob Rees-Mogg,754,702,,0
+Angela Rayner,753,684,,0
+Harry Maguire,753,685,,0
+Neymar,752,372,,0
+Kwarteng,751,271,,0
+Archer,748,283,,0
+Nicola Sturgeon,748,674,,0
+Welsh,747,573,,0
+Bob,745,385,,0
+Foden,744,306,,0
+Turnbull,744,298,,0
+Donald,744,383,,0
+Declan Rice,742,707,,0
+Morris,737,295,,0
+Ursula von der,736,681,,0
+Jair Bolsonaro,732,657,,0
+Ellis,730,247,,0
+Mohamed Salah,730,656,,0
+Norman,729,308,,0
+Reid,726,307,,0
+Meloni,723,189,,0
+Charlie,722,357,,0
+Phillips,722,389,,0
+Roy,719,331,,0
+Barrett,716,256,,0
+Sergio,715,627,,0
+Jane,715,334,,0
+Franco,714,281,,0
+Richardson,714,239,,0
+Elizabeth II,712,553,,0
+Wilkinson,712,213,,0
+Buttler,710,244,,0
+Abbott,708,335,,0
+Burke,708,305,,0
+David Moyes,707,667,,0
+Terry,704,264,,0
+Rapinoe,704,157,,0
+Mike,701,343,,0
+Blatter,699,156,,0
+Walsh,698,271,,0
+Burton,696,303,,0
+Max Verstappen,696,616,,0
+Moyes,696,312,,0
+Nuno,694,316,,0
+Lucy,694,324,,0
+Maria Sharapova,694,471,,0
+Depp,691,79,,0
+Daniel Andrews,691,583,,0
+Curry,691,257,,0
+Webb,691,251,,0
+Fernandes,688,289,,0
+Taylor Swift,688,558,,0
+Biles,688,118,,0
+Blues,686,456,,0
+Viktor,685,578,,0
+Watkins,683,290,,0
+Hull,683,456,,0
+James Cleverly,682,642,,0
+Ian,679,331,,0
+Mark Zuckerberg,679,586,,0
+Rupert Murdoch,678,507,,0
+Rodri,678,373,,0
+Joseph,677,333,,0
+Olaf Scholz,676,621,,0
+Marshall,676,301,,0
+Phil Foden,674,628,,0
+Hunter Biden,674,262,,0
+Tottenham Hotspur,670,576,,0
+Roberts-Smith,669,91,,0
+Emma,667,351,,0
+Margaret,667,377,,0
+Dave,666,338,,0
+Charlton,666,318,,0
+Wilder,665,200,,0
+Gerrard,664,219,,0
+Cuomo,659,143,,0
+Fernando Alonso,656,493,,0
+Narendra Modi,656,586,,0
+Kyrgios,654,146,,0
+Londoners,654,496,,0
+António Guterres,654,624,,0
+Hall,650,281,,0
+Pope,649,338,,0
+Lowe,647,274,,0
+Tuchel,646,286,,0
+Stevens,646,267,,0
+Vardy,646,186,,0
+Scot,645,580,,0
+Dick,645,250,,0
+Kevin Mc Carthy,644,566,,0
+Gibson,643,193,,0
+Rolfe,643,80,,0
+Jim Chalmers,641,568,,0
+Owen Farrell,640,584,,0
+Arthur,639,316,,0
+Bill Shorten,638,521,,0
+Clarke,638,313,,0
+Socceroos,637,283,,0
+Frost,637,253,,0
+Gauff,636,124,,0
+Richards,636,256,,0
+Burns,636,281,,0
+Austin,636,314,,0
+Bashir,633,184,,0
+Omar,633,177,,0
+Nixon,632,264,,0
+Meadows,630,148,,0
+Berlusconi,630,118,,0
+Swiatek,627,131,,0
+Alexander,626,315,,0
+Emily,625,286,,0
+Gordon Brown,625,560,,0
+Wade,624,158,,0
+Allan,624,256,,0
+Greta Thunberg,623,525,,0
+Letby,622,117,,0
+Green,622,388,,0
+Bukayo Saka,621,592,,0
+Leigh,621,313,,0
+Paterson,618,197,,0
+Owen,618,291,,0
+Nick,618,300,,0
+Tusk,618,210,,0
+Jenkins,615,240,,0
+Byrne,614,214,,0
+Lynn,612,147,,0
+Jonathan WilsonJonathan Wilson,611,611,,0
+Harvey,610,225,,0
+Fred,610,370,,0
+George Osborne,609,578,,0
+Kwasi Kwarteng,609,553,,0
+Leyen,609,283,,0
+Prince Andrew,608,331,,0
+Jacinda Ardern,607,523,,0
+Wolff,607,191,,0
+Pompeo,606,221,,0
+Scorsese,605,199,,0
+Lucas,604,322,,0
+Craig,604,231,,0
+Jude Bellingham,604,558,,0
+Bryant,603,195,,0
+post-Brexit,603,561,,0
+King,602,330,,0
+Booker,602,290,,0
+Brian,600,277,,0
+Arnold,598,216,,0
+Noah,598,226,,0
+Thomas Tuchel,597,573,,0
+Matt,597,305,,0
+Penny Wong,596,532,,0
+Mitch Mc Connell,596,537,,0
+Jim,596,292,,0
+Levy,594,252,,0
+Chen,594,149,,0
+Leo,593,258,,0
+Elizabeth Warren,592,530,,0
+Helen,591,280,,0
+Jack Grealish,591,552,,0
+Spencer,590,254,,0
+Ole Gunnar Solskjær,588,575,,0
+Harry Potter,587,406,,0
+Yang,587,138,,0
+Arbery,586,54,,0
+Nikki Haley,585,463,,0
+Sullivan,585,254,,0
+Ken,583,239,,0
+Claire,582,196,,0
+Fowler,580,211,,0
+Giuffre,580,120,,0
+Gavin Newsom,580,536,,0
+JD Vance,579,445,,0
+Churchill,579,313,,0
+Jonny Bairstow,579,537,,0
+Cruz,577,222,,0
+Tim,577,310,,0
+Sharma,576,247,,0
+Bach,575,240,,0
+Sancho,575,233,,0
+Spurs,575,454,,0
+Mc Gregor,574,155,,0
+Trent Alexander-Arnold,571,546,,0
+Rubiales,567,99,,0
+Hancock,566,314,,0
+Horner,566,141,,0
+Gareth Bale,565,466,,0
+Laura,564,301,,0
+Josh Frydenberg,564,515,,0
+Jeffrey Epstein,563,397,,0
+Reagan,560,313,,0
+Eddie,559,321,,0
+Sam Kerr,559,478,,0
+Walz,559,141,,0
+Hannah,559,295,,0
+Tucker Carlson,559,431,,0
+Keir,558,334,,0
+Antony,555,277,,0
+Lineker,555,187,,0
+Wayne Rooney,554,472,,0
+Rudy Giuliani,554,484,,0
+Casey,554,258,,0
+Fauci,554,186,,0
+Mohammed,553,258,,0
+Hanson,552,157,,0
+Erdoğan,552,230,,0
+Rhodes,551,212,,0
+Halep,551,142,,0
+Gaetz,549,106,,0
+Dmitry Peskov,548,532,,0
+Flynn,548,174,,0
+Josh,547,314,,0
+James Bond,546,419,,0
+Kevin De Bruyne,545,529,,0
+Philip,544,259,,0
+Olivier,544,320,,0
+Snapchat,544,353,,0
+Bezos,544,149,,0
+Justin Trudeau,544,492,,0
+Chris Minns,544,481,,0
+Pereira,544,206,,0
+Rio,543,367,,0
+Dad,543,402,,0
+Sara,542,179,,0
+Jadon Sancho,539,504,,0
+Kerr,539,274,,0
+Castro,538,228,,0
+Tory MP,537,497,,0
+Anne,535,279,,0
+Giles,535,209,,0
+Juve,533,302,,0
+Tom Brady,532,383,,0
+Casemiro,532,307,,0
+Schmidt,532,188,,0
+Jordan Henderson,532,500,,0
+Phil,530,315,,0
+Jason,529,230,,0
+Morales,529,95,,0
+Greensill,528,100,,0
+Armstrong,528,210,,0
+Lib Dem,528,378,,0
+Sadler,528,285,,0
+David Beckham,527,422,,0
+Mike Pompeo,527,502,,0
+Coleman,527,252,,0
+Ruth,526,243,,0
+Bradley,526,233,,0
+Kemi Badenoch,524,453,,0
+Naomi Osaka,524,410,,0
+Dan,523,294,,0
+Recep Tayyip Erdoğan,522,497,,0
+Sturgeon,522,275,,0
+Stuart Broad,521,474,,0
+Woodward,521,149,,0
+Hammond,520,215,,0
+Peters,519,162,,0
+Jamie,518,296,,0
+Hester,518,93,,0
+Yvette Cooper,518,495,,0
+Chuck Schumer,517,492,,0
+Kyle,517,171,,0
+Mark Wood,516,464,,0
+Roger,516,271,,0
+Cheney,516,151,,0
+Phil Mickelson,515,385,,0
+England,513,489,,0
+Camilla,513,272,,0
+Robert Jenrick,513,463,,0
+Douglas,511,214,,0
+Richarlison,511,291,,0
+Kyle Walker,510,483,,0
+Antonio Conte,510,472,,0
+Miles,510,185,,0
+Jose Mourinho,509,381,,0
+Drake,509,250,,0
+Kirby,509,260,,0
+Marquez,509,109,,0
+Dunn,508,142,,0
+Maddison,508,196,,0
+Dylan,508,165,,0
+Gucci,507,323,,0
+Zelenskiy,507,374,,0
+Simpson,506,179,,0
+Eric,506,285,,0
+Angus Taylor,506,389,,0
+Rogers,504,202,,0
+Kim Jong-un,504,378,,0
+Stormy Daniels,503,439,,0
+Ronald Reagan,503,449,,0
+Griffin,503,185,,0
+Manchin,502,135,,0
+Wimbledon,502,399,,0
+Bairstow,499,214,,0
+Barty,498,120,,0
+Jos Buttler,497,441,,0
+Ed Miliband,496,466,,0
+Alexei Navalny,496,391,,0
+Virgil van Dijk,495,470,,0
+Anthony,495,276,,0
+Azarenka,495,174,,0
+Grealish,494,230,,0
+Mario,493,189,,0
+Bragg,493,169,,0
+Unai Emery,492,470,,0
+Archie Bland,492,491,,0
+Schumacher,491,178,,0
+Mc Kenzie,491,193,,0
+Luke,491,246,,0
+Gladys Berejiklian,490,431,,0
+Barry,488,238,,0
+Alexandria Ocasio-Cortez,486,461,,0
+Suarez,486,166,,0
+Bruno Fernandes,486,466,,0
+Stephen,486,258,,0
+Malcolm Turnbull,485,430,,0
+Grace,485,270,,0
+Dom,483,192,,0
+Davey,480,172,,0
+Diane Abbott,480,354,,0
+Moses,480,154,,0
+Madonna,479,319,,0
+Dean,478,242,,0
+John Mc Donnell,478,451,,0
+Macbeth,478,252,,0
+Jonathan,475,290,,0
+Jimmy Anderson,475,445,,0
+Swift,475,175,,0
+Shah,475,145,,0
+Julian Assange,474,289,,0
+Harper,474,240,,0
+Alan,474,211,,0
+Schumer,473,206,,0
+Lakers,473,165,,0
+Gabriel,472,257,,0
+Steve Bannon,472,406,,0
+John Stones,472,452,,0
+Wes Streeting,471,426,,0
+David Lammy,471,440,,0
+Tate,471,165,,0
+Rob,470,207,,0
+Mac Donald,470,395,,0
+Roman Abramovich,468,412,,0
+Rachel,466,253,,0
+Daly,466,225,,0
+Thorpe,465,140,,0
+Martha,465,161,,0
+Steve Smith,465,406,,0
+Alisson,465,279,,0
+Nolan,464,164,,0
+Donald Tusk,463,402,,0
+Lopez,462,167,,0
+Vonn,462,99,,0
+Steve Borthwick,460,438,,0
+Juliet,460,279,,0
+Zhang,460,120,,0
+Lai,459,88,,0
+Liu,459,141,,0
+Yoon,459,73,,0
+Tony Abbott,458,393,,0
+Kenny,457,179,,0
+Reed,457,199,,0
+Brendan Rodgers,456,426,,0
+Kean,456,149,,0
+Sunderland,455,290,,0
+Shaw,454,288,,0
+Sean Dyche,454,426,,0
+Steven Gerrard,453,407,,0
+Liz,452,247,,0
+Ramos,452,181,,0
+Asio,452,169,,0
+Pep Guardiola’s,451,441,,0
+Amy,451,235,,0
+Nat West,449,227,,0
+Michael Cohen,448,342,,0
+Pogacar,448,101,,0
+Victoria Azarenka,448,340,,0
+Bashar al-Assad,447,388,,0
+Bernardo Silva,445,406,,0
+Archie,444,207,,0
+Sophie,443,269,,0
+Sinn Féin,443,219,,0
+Keith,442,186,,0
+Jofra Archer,441,399,,0
+Mordaunt,441,156,,0
+Osborne,440,216,,0
+Tom Cruise,440,298,,0
+Queen Elizabeth,440,357,,0
+Prince Charles,439,363,,0
+Elon Musk’s,439,406,,0
+Sky,439,357,,0
+Twitter,439,414,,0
+Rodriguez,439,167,,0
+Galloway,438,142,,0
+Lammy,438,177,,0
+Olivia,438,157,,0
+Ramsey,437,226,,0
+Sarkozy,437,100,,0
+Hart,437,194,,0
+Gavin Williamson,436,384,,0
+Michael Schumacher,436,337,,0
+Barnier,436,137,,0
+Gary Lineker,436,353,,0
+Duncan,434,197,,0
+O’Neil,433,215,,0
+Bielsa,433,153,,0
+James Maddison,433,419,,0
+Perrottet,432,168,,0
+Torres,432,176,,0
+Moeen Ali,431,393,,0
+Greene,431,156,,0
+Lisa,430,197,,0
+Centrelink,429,225,,0
+Chris Woakes,429,395,,0
+Cheng,429,124,,0
+Moon,428,238,,0
+Paul Pogba,428,376,,0
+Mone,428,52,,0
+Stephens,427,193,,0
+Gill,427,172,,0
+Zidane,426,170,,0
+Eddie Howe,425,410,,0
+Tyson,425,127,,0
+Neil,425,226,,0
+Ed Davey,425,382,,0
+Jeremy,425,248,,0
+Gomez,424,215,,0
+La Niña,424,202,,0
+Skinner,422,177,,0
+XI,422,401,,0
+Liz Truss’s,422,397,,0
+Benn,421,143,,0
+Streeting,420,160,,0
+Kai Havertz,419,405,,0
+Huang,418,95,,0
+Rory,418,223,,0
+Chauvin,417,86,,0
+Bryan,417,161,,0
+Raheem Sterling,417,385,,0
+Kompany,416,140,,0
+Jeff Bezos,416,361,,0
+Son Heung-min,416,399,,0
+Navarro,415,93,,0
+Scholz,414,207,,0
+Ed,414,291,,0
+George W Bush,413,399,,0
+Axios,413,301,,0
+Steve Barclay,413,374,,0
+Odesa,412,214,,0
+Guterres,412,215,,0
+Luke Shaw,412,395,,0
+Bates,412,204,,0
+Megan Rapinoe,411,313,,0
+Newman,411,160,,0
+Malkinson,410,47,,0
+Jean,410,167,,0
+Charles III,410,305,,0
+Aston Martin,410,247,,0
+Matthew,409,233,,0
+Robert Lewandowski,408,361,,0
+Hawke,408,148,,0
+Davidson,407,148,,0
+Bowman,407,96,,0
+Mohammed bin Salman,406,333,,0
+Kohli,406,134,,0
+Jeremy Corbyn’s,406,378,,0
+Havertz,405,184,,0
+Susan,405,186,,0
+Lorenzo,405,135,,0
+Jamal Khashoggi,405,339,,0
+Willian,404,255,,0
+Patrick Greenfield,404,401,,0
+Philip Hammond,403,383,,0
+Novak,403,235,,0
+Broad,403,173,,0
+Nichols,403,88,,0
+Lawson,402,109,,0
+Kaepernick,401,104,,0
+Winston Churchill,401,360,,0
+Toney,401,149,,0
+Richard Nixon,401,350,,0
+Ben Wallace,401,370,,0
+Colbert,400,106,,0
+Coffey,400,169,,0
+Ella,400,133,,0
+Gilbert,400,161,,0
+Graham Potter,400,379,,0
+Gabriel Jesus,400,369,,0
+Matteo Salvini,400,356,,0
+Cheshire,400,332,,0
+Gareth,400,238,,0
+Hassan,399,133,,0
+Romelu Lukaku,399,378,,0
+Dustin Johnson,399,304,,0
+Gardner,399,138,,0
+Mc Donnell,398,179,,0
+Slater,398,153,,0
+Sean,398,225,,0
+Mike Johnson,397,347,,0
+Carr,397,151,,0
+Haftar,397,72,,0
+Sarina Wiegman,396,366,,0
+Oliver Dowden,396,366,,0
+Kerry,396,153,,0
+Yevgeny Prigozhin,396,333,,0
+Mullins,395,119,,0
+Ray,395,151,,0
+Carney,395,136,,0
+Phoebe Weston,395,395,,0
+Albert,395,163,,0
+Brighton,394,326,,0
+Romney,394,99,,0
+Abraham,394,199,,0
+Wada,393,88,,0
+Ghosn,393,37,,0
+Valentine,392,275,,0
+Lukaku,392,176,,0
+Dixon,392,157,,0
+Warnock,392,128,,0
+Gustavsson,391,113,,0
+Kushner,391,112,,0
+Simona Halep,391,330,,0
+Thunberg,389,151,,0
+Marles,389,149,,0
+Emma Hayes,388,355,,0
+Benzema,388,149,,0
+Lewandowski,388,151,,0
+Penny Mordaunt,388,349,,0
+Brianna,387,54,,0
+Griffiths,386,161,,0
+Greg Abbott,386,337,,0
+Mueller,386,147,,0
+Keir Starmer’s,386,376,,0
+Rishi,386,273,,0
+Eriksen,385,187,,0
+Carlos,385,246,,0
+Keating,385,119,,0
+Nico Rosberg,385,278,,0
+Conor Gallagher,385,370,,0
+Barilaro,385,88,,0
+Karim Benzema,384,351,,0
+Alito,384,100,,0
+Bobby,384,184,,0
+Leonardo,384,141,,0
+Rosberg,384,152,,0
+Sanderson,382,95,,0
+Sala,382,81,,0
+Elton John,382,330,,0
+Foley,382,154,,0
+Dominic Perrottet,382,340,,0
+Tom Watson,382,330,,0
+Jacob,381,175,,0
+Jo,381,200,,0
+Barton,381,150,,0
+Dorries,381,136,,0
+Tim Walz,381,277,,0
+Bio NTech,380,250,,0
+Andy Burnham,380,353,,0
+Sue Gray,380,270,,0
+Usyk,379,64,,0
+Erasmus,378,130,,0
+Rihanna,378,256,,0
+Chris Bowen,378,342,,0
+Petra Kvitova,378,295,,0
+Sutton,378,157,,0
+Rossi,377,122,,0
+Jens Stoltenberg,377,350,,0
+Keegan,377,174,,0
+Maro Itoje,376,354,,0
+Molly,374,154,,0
+Colin,374,171,,0
+Ollie Watkins,374,362,,0
+Earl,373,249,,0
+Christian Eriksen,373,349,,0
+Karen,373,187,,0
+Matthews,373,166,,0
+Ashton,373,162,,0
+Fraser,372,174,,0
+Van Dijk,372,201,,0
+Caroline,372,194,,0
+Christopher,372,163,,0
+Zlatan Ibrahimovic,372,317,,0
+Carlos Alcaraz,371,346,,0
+Daley,371,124,,0
+Norrie,371,84,,0
+Becker,371,125,,0
+Owens,371,123,,0
+Sarri,371,148,,0
+Roy Hodgson,370,350,,0
+Riley,370,155,,0
+Cairns,369,200,,0
+Prince Philip,369,240,,0
+Brittany Higgins,369,314,,0
+Julia,368,190,,0
+Sue,368,184,,0
+Rafiq,368,68,,0
+Hansen,367,140,,0
+George Ford,367,338,,0
+Zelensky,367,139,,0
+Billy,367,216,,0
+Caroline Wozniacki,366,276,,0
+Sergei Lavrov,365,349,,0
+Ulez,364,151,,0
+Doyle,364,164,,0
+Jake,364,115,,0
+Lowry,364,129,,0
+Tik Tok’s,364,210,,0
+Kieran Trippier,363,346,,0
+Ben Chilwell,363,347,,0
+Bass,363,134,,0
+Guy,363,187,,0
+John Major,363,326,,0
+Glazer,361,173,,0
+Greg Hunt,361,332,,0
+Pollard,361,153,,0
+Michael Jordan,360,258,,0
+Warren Gatland,360,343,,0
+Gupta,360,113,,0
+Mann,360,148,,0
+Wozniacki,360,117,,0
+Townsend,359,192,,0
+Trippier,359,137,,0
+Jimmy,359,205,,0
+Atkinson,358,129,,0
+Anthony Fauci,358,335,,0
+Knight,358,189,,0
+Barnaby Joyce,358,311,,0
+Hogan,357,114,,0
+Onana,357,165,,0
+Price,357,201,,0
+Ted Cruz,357,304,,0
+Burgess,357,124,,0
+Lam,357,148,,0
+Ange Postecoglou,356,340,,0
+Jessica,356,157,,0
+Benedict,356,100,,0
+Kaplan,356,119,,0
+Michelle,355,191,,0
+Tanya Plibersek,355,320,,0
+Zahawi,355,109,,0
+Iain Duncan Smith,355,336,,0
+Marcus,355,196,,0
+Alexander Lukashenko,354,305,,0
+Finn,354,249,,0
+Boyd,354,114,,0
+Venus Williams,354,255,,0
+Harvey Weinstein,353,297,,0
+Johnston,353,140,,0
+Whelan,353,107,,0
+Jurgen Klopp,353,264,,0
+Mc Cormack,353,111,,0
+Leonard,353,125,,0
+Stalin,352,233,,0
+Lula da Silva,352,336,,0
+Venus,352,241,,0
+Samuel,352,140,,0
+Jay,352,145,,0
+Luis Enrique,351,203,,0
+Logan,351,142,,0
+Nick Kyrgios,351,286,,0
+Moss,351,142,,0
+Yates,351,160,,0
+Charles Leclerc,350,320,,0
+Dennis,350,176,,0
+Zinedine Zidane,350,309,,0
+Nadine Dorries,350,325,,0
+Jenny,350,184,,0
+Lucy Bronze,350,318,,0
+Gary,350,199,,0
+De Zerbi,349,139,,0
+Wolf,349,174,,0
+Leo Varadkar,349,322,,0
+Tyler,349,149,,0
+Jonny,349,266,,0
+Lennon,348,150,,0
+Wheeler,348,88,,0
+Abe,348,112,,0
+Dettori,347,105,,0
+Pat Cummins,347,320,,0
+Gershkovich,346,83,,0
+Walton,346,167,,0
+Ollie Pope,346,318,,0
+Merrick Garland,345,327,,0
+Sharp,345,126,,0
+Nelson Mandela,344,302,,0
+Sally,344,168,,0
+Wilko,344,66,,0
+Katie,344,175,,0
+Marcus Smith,344,314,,0
+Pete,343,173,,0
+Zverev,343,96,,0
+Edward,343,187,,0
+Preston,343,188,,0
+Scott Mc Tominay,343,330,,0
+Jack Smith,342,310,,0
+Simmons,342,105,,0
+Hodgson,342,163,,0
+Julie,341,147,,0
+Thomas Cook,341,102,,0
+Pete Buttigieg,340,313,,0
+Marjorie Taylor Greene,340,302,,0
+Tom Curry,340,301,,0
+Tucker,340,142,,0
+Sepp Blatter,340,231,,0
+Salmond,339,78,,0
+Sharif,339,78,,0
+Humza Yousaf,339,280,,0
+Pickford,339,165,,0
+Steele,339,143,,0
+Wyatt,339,130,,0
+Michel Barnier,339,294,,0
+Beckett,338,164,,0
+Maya,337,121,,0
+Cinderella,337,220,,0
+Stone,337,145,,0
+Andrew Bailey,337,305,,0
+Page,336,139,,0
+Altman,336,96,,0
+Lauren,335,169,,0
+Richard Marles,335,310,,0
+Pele,335,122,,0
+Duggan,335,63,,0
+Mead,335,124,,0
+Adolf Hitler,334,311,,0
+Scott Morrison’s,334,311,,0
+Jim Ratcliffe,334,303,,0
+Schiff,333,126,,0
+Marco Silva,333,314,,0
+Michael Jackson,332,235,,0
+Dickens,332,164,,0
+Mandela,332,122,,0
+Dane,332,288,,0
+Law,331,163,,0
+Belichick,331,77,,0
+Ahmad,331,133,,0
+David Warner,331,306,,0
+Moreno,331,133,,0
+Luis Suarez,331,246,,0
+Marsh,330,129,,0
+Shein,330,80,,0
+Don,329,142,,0
+Ashworth,329,147,,0
+Adam Bandt,328,293,,0
+Mark Dreyfus,328,304,,0
+Jess,328,176,,0
+John Terry,328,216,,0
+Bowie,328,127,,0
+Bruno,328,167,,0
+Folau,327,68,,0
+Julian,327,167,,0
+Giorgia Meloni,326,303,,0
+Chris Whitty,326,302,,0
+Mendy,326,174,,0
+Hasina,325,64,,0
+David Pocock,324,288,,0
+Richard III,324,134,,0
+Baxter,324,133,,0
+Menendez,324,46,,0
+Keane,324,174,,0
+Roberto Firmino,323,298,,0
+Liz Cheney,323,247,,0
+Jordan Pickford,323,314,,0
+Josep Borrell,323,303,,0
+Cole Palmer,323,296,,0
+Theresa May’s,323,315,,0
+David Davis,322,279,,0
+Patterson,322,150,,0
+Tommy,322,178,,0
+Ofqual,322,105,,0
+Theranos,322,63,,0
+Daniel Levy,322,303,,0
+Fisher,322,145,,0
+Zhao,321,109,,0
+Hudson,321,130,,0
+Dowden,321,144,,0
+Clare,321,175,,0
+Wang,321,162,,0
+Werner,321,141,,0
+Marta,320,153,,0
+Fashion StatementStyle,320,320,,0
+Phelps,320,120,,0
+Sarah Everard,320,248,,0
+Robin,320,152,,0
+Paltrow,319,53,,0
+Burnham,319,128,,0
+Jamie Vardy,319,282,,0
+Pierre-Emerick Aubameyang,319,305,,0
+Carrie,319,211,,0
+Garland,318,112,,0
+Christian Porter,318,287,,0
+Riyad Mahrez,318,304,,0
+Gandhi,318,119,,0
+Zak Crawley,317,295,,0
+Amber Rudd,317,272,,0
+Robert Mueller,317,287,,0
+Meghan Markle,317,203,,0
+Michelle Obama,317,258,,0
+Peskov,317,189,,0
+Hussain,316,120,,0
+Manning,316,114,,0
+Hodge,316,135,,0
+Greenwood,316,170,,0
+Jordan Spieth,316,238,,0
+Brooks Koepka,316,255,,0
+Carey,316,142,,0
+Spielberg,316,163,,0
+Ibrahimovic,316,134,,0
+Zelenskyy,316,101,,0
+Anthony Martial,315,298,,0
+Frydenberg,315,164,,0
+John Kirby,315,307,,0
+Boyle,315,112,,0
+Bruce Lehrmann,315,254,,0
+Brittany,315,217,,0
+Sergei Skripal,314,201,,0
+Kvitova,314,138,,0
+Kemp,314,125,,0
+Vincent Kompany,313,273,,0
+Griner,313,47,,0
+David de Gea,311,295,,0
+Joan,311,169,,0
+Malcolm,311,166,,0
+Daniil Medvedev,309,286,,0
+Harry Brook,309,277,,0
+Li Na,309,202,,0
+Jota,309,198,,0
+Skripal,308,127,,0
+Luiz Inácio,308,296,,0
+Joelinton,308,188,,0
+Christian Pulisic,308,290,,0
+Tommy Robinson,308,230,,0
+Obrador,307,126,,0
+Kay,307,107,,0
+Nico,307,197,,0
+Britons,307,288,,0
+Gianni Infantino,306,280,,0
+Romeo,305,209,,0
+Callum Hudson-Odoi,305,301,,0
+Muhammad,305,177,,0
+Wilfried Zaha,305,281,,0
+Ruiz,305,112,,0
+Avdiivka,305,163,,0
+Zaghari-Ratcliffe,304,80,,0
+Simone Biles,304,228,,0
+Freud,304,105,,0
+Romero,304,132,,0
+Mc Gowan,303,111,,0
+Amanda,303,140,,0
+Marcelo Bielsa,303,280,,0
+Rahm,303,88,,0
+Roberto,303,210,,0
+Brendon Mc Cullum,303,294,,0
+Clarence Thomas,303,246,,0
+Dawson,303,124,,0
+Hewitt,302,113,,0
+Hemedti,302,92,,0
+Greg Jericho,302,298,,0
+Bernard,302,156,,0
+Thiago,301,208,,0
+Lee Anderson,301,244,,0
+Kalvin Phillips,301,280,,0
+Rex,301,77,,0
+Walters,301,104,,0
+Lloyd Austin,301,283,,0
+Elvis,300,197,,0
+Ted,300,177,,0
+Bronze,300,125,,0
+Jean-Claude Juncker,300,268,,0
+Annastacia Palaszczuk,300,278,,0
+Ellison,299,81,,0
+Lindsey Graham,299,285,,0
+Mc Cullum,298,135,,0
+Quinn,298,145,,0
+Perez,298,125,,0
+Jamie George,298,279,,0
+Luka Modric,298,277,,0
+Bill Gates,298,259,,0
+Penny,298,107,,0
+De Chambeau,297,76,,0
+Staley,297,55,,0
+Briton,297,275,,0
+Tomas Berdych,297,231,,0
+Mark Meadows,297,264,,0
+Le Bron James,297,261,,0
+Kishida,297,96,,0
+Ivanka Trump,297,193,,0
+Andrew Cuomo,297,253,,0
+Danny,297,174,,0
+Andy Robertson,296,286,,0
+Lady Gaga,296,230,,0
+Maurizio Sarri,296,276,,0
+Abdullah,296,133,,0
+Judy,296,187,,0
+Wiki Leaks,295,169,,0
+David Ferrer,295,229,,0
+Luke Donald,295,221,,0
+Nigel Farage’s,294,275,,0
+Tsai,294,76,,0
+Kerber,294,98,,0
+Ivanka,294,153,,0
+Joe Manchin,294,252,,0
+Berry,293,144,,0
+Mayweather,293,61,,0
+Alexander Zverev,293,250,,0
+Neely,293,27,,0
+Ritchie,293,131,,0
+Costello,293,109,,0
+Milton Keynes,293,236,,0
+Mancini,292,123,,0
+Marie,292,158,,0
+Paxton,292,68,,0
+Aemo,292,99,,0
+Feinstein,292,56,,0
+Ederson,291,211,,0
+Stuart,291,186,,0
+Rebecca,291,173,,0
+John Kerry,291,269,,0
+Ivan Toney,290,259,,0
+Yulia,290,183,,0
+Bloomberg,290,189,,0
+Khawaja,290,98,,0
+Jack Leach,290,258,,0
+Maher,289,81,,0
+Countess,289,179,,0
+Lee Westwood,289,243,,0
+Reece James,288,280,,0
+North,288,186,,0
+Lane,288,102,,0
+Todd Boehly,288,275,,0
+Mc Tominay,288,165,,0
+Sexton,288,125,,0
+Abbas,288,105,,0
+Rowling,288,158,,0
+Rivera,287,98,,0
+Mitt Romney,287,243,,0
+Beck,287,106,,0
+Daniel Ricciardo,287,238,,0
+Farah,287,77,,0
+Mc Bride,287,72,,0
+United,287,262,,0
+Angelique Kerber,287,235,,0
+Chapman,286,128,,0
+Gillian Keegan,286,250,,0
+David Bowie,286,241,,0
+Billy Vunipola,286,245,,0
+Ding,286,74,,0
+Sandy,286,139,,0
+Yoav Gallant,286,273,,0
+Jon,286,114,,0
+Jill,286,152,,0
+Snowden,285,82,,0
+Coco Gauff,285,249,,0
+Phil Neville,285,258,,0
+Leah Williamson,285,271,,0
+Kirk,284,113,,0
+Acosta,284,67,,0
+Linda,283,152,,0
+Flushing Meadows,283,247,,0
+Latham,283,78,,0
+Rutte,283,88,,0
+Jared Kushner,282,257,,0
+Welshman,282,243,,0
+Carlo Ancelotti,282,271,,0
+Cavendish,282,93,,0
+Barkley,282,126,,0
+Assange,282,124,,0
+Rupert Murdoch’s,282,264,,0
+Vieira,282,160,,0
+Sanchez,282,145,,0
+Emma Raducanu,281,271,,0
+Beech,281,38,,0
+Eoin Morgan,281,252,,0
+John Bolton,280,249,,0
+Ibrahim,280,127,,0
+Stan,280,165,,0
+Flores,280,121,,0
+Morton,280,106,,0
+Annie,280,144,,0
+Caroline Lucas,280,255,,0
+Harrington,280,112,,0
+Jenson Button,279,210,,0
+Beto,279,205,,0
+West,279,192,,0
+Mc Carthy’s,279,157,,0
+Granit Xhaka,279,263,,0
+Pitt,278,109,,0
+Beth Mead,278,265,,0
+Diego Maradona,278,207,,0
+Macdonald,278,84,,0
+Neto,278,180,,0
+Clay,278,91,,0
+Mia,278,102,,0
+Harding,278,109,,0
+Eric Adams,278,238,,0
+Snyder,278,62,,0
+Hartley,277,125,,0
+David Littleproud,277,255,,0
+John Roberts,277,245,,0
+Olsen,276,125,,0
+Gregory,276,125,,0
+Joker,276,148,,0
+Olivier Giroud,276,258,,0
+John F Kennedy,275,256,,0
+Mahrez,275,168,,0
+Donald Trump Jr,275,230,,0
+David Cameron’s,275,272,,0
+Maxwell,275,124,,0
+Mc Kenna,275,120,,0
+Pellegrini,274,114,,0
+Colin Kaepernick,274,217,,0
+Pat,274,123,,0
+Simeone,274,90,,0
+Kimi Raikkonen,274,231,,0
+Nicholls,274,119,,0
+Muhammad Ali,274,212,,0
+Copperfield,274,15,,0
+Nancy,274,166,,0
+Tony Burke,274,241,,0
+Crosby,274,110,,0
+Gomes,273,149,,0
+Tyson Fury,273,189,,0
+Littler,273,46,,0
+Fitzgerald,272,118,,0
+Carol,272,182,,0
+Mainoo,272,127,,0
+Cain,272,104,,0
+Johnny,272,154,,0
+Fitzpatrick,272,89,,0
+Rajoy,271,67,,0
+Nigel,271,153,,0
+Roman,271,177,,0
+Tom Tugendhat,271,260,,0
+Curtis,271,153,,0
+Ofgem,270,163,,0
+David Luiz,270,176,,0
+Berger,270,117,,0
+Rashid,270,139,,0
+Rafa,270,193,,0
+Alexander-Arnold,269,174,,0
+Fiona,269,113,,0
+Soros,269,69,,0
+Swan,269,152,,0
+Barber,269,91,,0
+Courtney Lawes,269,253,,0
+Von der,269,146,,0
+Potts,268,92,,0
+Barbara,268,166,,0
+Hawthorn,268,151,,0
+Raac,268,78,,0
+Maduro,268,145,,0
+Martinez,268,108,,0
+Browne,268,90,,0
+Ferrer,268,125,,0
+Kei Nishikori,268,222,,0
+Hernandez,267,96,,0
+Jan,266,129,,0
+Todd,266,113,,0
+Glass,266,146,,0
+Herbert,266,124,,0
+Mugabe,266,57,,0
+Toto Wolff,266,245,,0
+Fenerbahce,266,175,,0
+Virat Kohli,266,239,,0
+Lisa Nandy,265,242,,0
+Mateo Kovacic,265,264,,0
+Mao,265,125,,0
+Myers,265,96,,0
+Dfat,264,117,,0
+Sussan Ley,264,251,,0
+Ron,263,122,,0
+Dracula,263,121,,0
+Roberto De Zerbi,263,256,,0
+Khan Younis,263,154,,0
+Sackler,263,75,,0
+Hillary,263,168,,0
+Imran Khan,263,189,,0
+Mike Ashley,263,234,,0
+Saunders,263,127,,0
+Lando Norris,262,249,,0
+Jennifer,262,143,,0
+Bamford,262,95,,0
+Justin Rose,262,234,,0
+Adam Schiff,262,247,,0
+Jo-Wilfried Tsonga,262,209,,0
+Webster,262,144,,0
+Orban,262,71,,0
+Jo Swinson,262,229,,0
+Tsitsipas,261,75,,0
+Fischer,261,93,,0
+David Silva,261,196,,0
+Ley,261,112,,0
+Ibac,260,51,,0
+Fani Willis,260,214,,0
+Sage,260,160,,0
+Napoleon,260,161,,0
+David Smith,260,235,,0
+Eriksson,260,76,,0
+Walter,260,135,,0
+Xu,259,61,,0
+Mark Rowley,259,220,,0
+Rubio,259,102,,0
+Christine,259,154,,0
+Carmichael,259,104,,0
+Felix,258,111,,0
+Michel,258,114,,0
+Spider-Man,258,148,,0
+Kobe Bryant,257,161,,0
+Martin Scorsese,257,224,,0
+Beckham,257,134,,0
+Maggie,257,126,,0
+Steven Spielberg,257,238,,0
+Chan,256,117,,0
+Child,256,198,,0
+Wilders,256,48,,0
+Munster,256,128,,0
+Steven,256,134,,0
+Carlos Sainz,256,236,,0
+Robson,255,131,,0
+Koch,255,135,,0
+Sarr,255,165,,0
+Mark Rutte,255,233,,0
+Gantz,255,80,,0
+Emmy,255,240,,0
+John Howard,254,232,,0
+Barker,254,100,,0
+Smollett,254,20,,0
+Louise,254,157,,0
+Aung San Suu Kyi,254,120,,0
+Jo Cox,254,161,,0
+Ginsburg,254,65,,0
+Merchan,254,104,,0
+Vince,254,86,,0
+Hawkins,253,105,,0
+Fuller,253,90,,0
+Kumar,253,97,,0
+Chamberlain,253,90,,0
+Jake Sullivan,253,245,,0
+Trevor,253,115,,0
+Virgin,253,150,,0
+Mark Butler,253,238,,0
+Haniyeh,253,69,,0
+Matt Gaetz,253,200,,0
+Fifa,253,206,,0
+Emily Thornberry,253,225,,0
+Fran Kirby,253,242,,0
+William Barr,253,234,,0
+Alex Morgan,252,210,,0
+Tony Blair’s,252,248,,0
+Jess Phillips,252,227,,0
+Griffith,252,120,,0
+Nash,252,91,,0
+Twitch,252,117,,0
+Nicklaus,252,84,,0
+Purdy,252,49,,0
+Larry,252,143,,0
+Aaron Ramsdale,252,240,,0
+Wu,251,112,,0
+Adam Scott,251,199,,0
+Levi,251,124,,0
+Bernie,251,140,,0
+Bibby,250,135,,0
+Bob Dylan,250,189,,0
+Sergei Shoigu,250,242,,0
+Mark Webber,250,173,,0
+Smyth,250,50,,0
+Sacoolas,250,46,,0
+Will Smith,250,174,,0
+Alan Shearer,250,213,,0
+Geidt,250,61,,0
+Brett Kavanaugh,250,235,,0
+Marco Rubio,250,238,,0
+Martin Luther King,250,225,,0
+David Frost,249,231,,0
+Charlie Hebdo,249,109,,0
+Cullen,249,98,,0
+Diogo Jota,249,237,,0
+Recep Tayyip Erdogan,249,208,,0
+Aaron,249,146,,0
+Mitchell Starc,249,237,,0
+Dias,249,149,,0
+Crawley,248,127,,0
+Patrick Mahomes,248,209,,0
+Neal,248,98,,0
+Ivan,248,124,,0
+Jimmy Carter,248,186,,0
+Wayne,248,142,,0
+Louis van Gaal,248,229,,0
+Giroud,248,120,,0
+Hopkins,248,95,,0
+Vingegaard,248,71,,0
+Packer,248,63,,0
+Pepe,247,105,,0
+Tammy Abraham,247,229,,0
+Peterson,247,82,,0
+Angela,247,136,,0
+Luis,247,196,,0
+Laura Kuenssberg,247,235,,0
+George Russell,247,228,,0
+Binance,246,46,,0
+Nunes,246,123,,0
+Allison,246,90,,0
+Bella,246,92,,0
+Nandy,246,105,,0
+Baird,246,84,,0
+Lauren James,245,213,,0
+Dunne,245,80,,0
+Evan,245,79,,0
+Nora,245,93,,0
+Antoine Griezmann,245,222,,0
+Callum Wilson,244,232,,0
+Bernstein,244,95,,0
+Timo Werner,244,230,,0
+Stan Wawrinka,244,215,,0
+Gary Neville,244,226,,0
+Leon,244,121,,0
+Carrie Lam,243,172,,0
+Goldsmith,243,97,,0
+Joe Gomez,243,233,,0
+Ortega,243,124,,0
+Thiago Silva,243,217,,0
+Anthony Joshua,243,190,,0
+Whitty,243,110,,0
+Kelleher,243,145,,0
+Gates,243,84,,0
+Milos Raonic,242,195,,0
+Adil Rashid,242,218,,0
+Agnieszka Radwanska,241,184,,0
+Mc Cabe,241,85,,0
+Scheffler,241,61,,0
+Adrian,241,136,,0
+John Bercow,241,206,,0
+Janet,241,107,,0
+Forrest,241,74,,0
+Madeleine,241,75,,0
+Lambie,241,87,,0
+Poulter,241,91,,0
+Simon Birmingham,240,224,,0
+Jarrod Bowen,240,234,,0
+Xavi,240,127,,0
+Fayed,240,17,,0
+Sharpe,240,92,,0
+Martin Ødegaard,240,235,,0
+Cummins,240,131,,0
+Geelong,240,143,,0
+Gunn,240,94,,0
+Buckley,239,104,,0
+Sinclair,239,84,,0
+Gonzalez,239,114,,0
+Jill Biden,239,197,,0
+Christian Horner,239,223,,0
+Jacinta Allan,239,201,,0
+Hecker,239,31,,0
+Leonardo Di Caprio,239,217,,0
+Lindsay Hoyle,238,211,,0
+Leinster,238,106,,0
+Ben Duckett,238,216,,0
+Sheila,238,99,,0
+Giggs,238,79,,0
+Russo,238,121,,0
+Hu,238,60,,0
+Dyer,238,77,,0
+Andrea Leadsom,238,222,,0
+Coppola,237,85,,0
+Darroch,237,46,,0
+David Attenborough,237,211,,0
+Mozart,237,161,,0
+Eberechi Eze,237,229,,0
+Boulter,237,66,,0
+Thierry Henry,237,215,,0
+Ollie Robinson,237,208,,0
+Durst,237,15,,0
+Khashoggi,237,95,,0
+Littleproud,237,114,,0
+Nikki,237,80,,0
+Lin,237,83,,0
+Sergio Ramos,237,205,,0
+Mark Harper,237,223,,0
+Strauss,236,88,,0
+Roberto Mancini,236,212,,0
+John Crace,236,191,,0
+Lynch,236,126,,0
+Warne,236,56,,0
+Coutinho,236,104,,0
+Hobbs,236,98,,0
+Mc Call,235,91,,0
+Jack Nicklaus,235,188,,0
+Benjamin,235,101,,0
+Chekhov,235,147,,0
+Gareth Southgate’s,235,224,,0
+Porto,235,169,,0
+Henry Slade,234,218,,0
+Steve Baker,234,216,,0
+Meyers,234,70,,0
+Linda Reynolds,234,216,,0
+pro-Brexit,234,208,,0
+Houghton,234,101,,0
+Vallance,234,88,,0
+Valtteri Bottas,234,222,,0
+Luhansk,234,191,,0
+Duckenfield,233,36,,0
+Rupert,233,133,,0
+Sisi,233,85,,0
+James Milner,233,224,,0
+Steve Bruce,233,212,,0
+Ellie,233,118,,0
+Livingstone,232,102,,0
+Queen Victoria,232,201,,0
+Cass,232,77,,0
+Nicholson,232,94,,0
+Elliot Daly,231,214,,0
+Hearn,231,66,,0
+Shapiro,231,88,,0
+Stonewall,231,141,,0
+Connolly,231,108,,0
+Lachlan,231,100,,0
+Cheika,231,55,,0
+Durant,231,77,,0
+Felipe Massa,231,192,,0
+Bird,231,109,,0
+Kobbie Mainoo,231,221,,0
+Mair,231,33,,0
+Pearce,231,108,,0
+Jim Crow,230,168,,0
+Shirley,230,99,,0
+Princess Diana,230,185,,0
+Elliot,230,108,,0
+Mo Salah,230,175,,0
+Philippe,230,121,,0
+Liam,230,107,,0
+Colston,229,67,,0
+Mary Earps,229,210,,0
+Piers Morgan,229,205,,0
+Ann,229,129,,0
+Marc Guéhi,229,219,,0
+Zinchenko,229,121,,0
+Marise Payne,229,223,,0
+Arcuri,229,38,,0
+Aaron Wan-Bissaka,228,220,,0
+Cunningham,228,92,,0
+Curran,228,78,,0
+Alok Sharma,228,209,,0
+Carson,227,112,,0
+Greta Gerwig,227,186,,0
+Lucy Letby,227,147,,0
+Vincent,227,116,,0
+Christensen,227,101,,0
+Brad Pitt,227,197,,0
+Humphries,226,48,,0
+Lloris,226,110,,0
+Loach,226,54,,0
+Sweeney,226,107,,0
+Vaughan,226,66,,0
+Seymour,226,72,,0
+Mikaela Shiffrin,225,122,,0
+Stevenson,225,97,,0
+Ian Poulter,225,186,,0
+Justin Welby,225,197,,0
+Robbie,225,135,,0
+Paulo,225,170,,0
+Davison,225,56,,0
+Met,225,190,,0
+Duckett,225,87,,0
+Froome,225,63,,0
+Poole,225,118,,0
+Michael Phelps,224,156,,0
+Middleton,224,103,,0
+Bild,224,187,,0
+Regan,224,100,,0
+Peng,224,48,,0
+Wendy,224,110,,0
+Vine,224,82,,0
+Simon Case,224,193,,0
+Salman,223,114,,0
+Hogg,223,88,,0
+Julen Lopetegui,223,216,,0
+Dmytro Kuleba,223,219,,0
+Dante,223,135,,0
+Mitsotakis,223,86,,0
+Katherine,223,120,,0
+De Niro,223,72,,0
+Dominic Calvert-Lewin,223,218,,0
+Millie Bright,222,214,,0
+Adele,222,160,,0
+Vivianne Miedema,222,210,,0
+Jason Roy,222,203,,0
+Dale,222,89,,0
+St Mary’s,222,176,,0
+Zaha,222,125,,0
+Leigh Day,222,150,,0
+Margot Robbie,222,192,,0
+Zumbo,222,15,,0
+Coles,221,124,,0
+Giro,221,103,,0
+Balotelli,221,108,,0
+Rainn,221,213,,0
+Bard,221,137,,0
+Beth,221,104,,0
+Tudge,221,51,,0
+Cory Booker,221,196,,0
+Gloria,221,90,,0
+Silvio Berlusconi,220,178,,0
+Mussolini,220,122,,0
+Dobbs,220,143,,0
+Letitia James,220,198,,0
+Cormann,220,66,,0
+Rory Stewart,220,204,,0
+Sami,220,50,,0
+Andrew Tate,220,159,,0
+Charles Michel,220,209,,0
+Jim Jordan,220,174,,0
+Hurley,219,77,,0
+Dorothy,219,134,,0
+Solomon,219,149,,0
+Mundine,219,39,,0
+James Ward-Prowse,219,213,,0
+Senna,219,83,,0
+Everard,219,96,,0
+Ball,219,98,,0
+Ellen White,219,197,,0
+Kylian Mbappé,219,212,,0
+Hugh Grant,219,176,,0
+Jackie,219,116,,0
+Crucible,218,129,,0
+Ko,218,48,,0
+Acoba,218,54,,0
+Welby,218,95,,0
+Diaz,218,77,,0
+Lindsey Vonn,218,129,,0
+Jeff,218,126,,0
+pre-Covid,217,203,,0
+Chang,217,73,,0
+Selby,217,83,,0
+Sands,217,83,,0
+Kanye West,217,202,,0
+Grigor Dimitrov,217,183,,0
+Hakim Ziyech,217,209,,0
+Jesse Lingard,216,209,,0
+X.,216,210,,0
+Pyne,216,42,,0
+Dominic Thiem,216,195,,0
+Sutherland,216,80,,0
+Hume,216,104,,0
+Miguel,215,180,,0
+Thomas Bach,215,193,,0
+Kevin Durant,215,183,,0
+Sierra Leone,215,155,,0
+Stern,215,94,,0
+Ben White,215,210,,0
+Morrissey,215,76,,0
+Benítez,214,101,,0
+Badenoch,214,121,,0
+Johnny Sexton,214,202,,0
+Firmino,214,124,,0
+JFK,214,140,,0
+Hugo Lloris,214,202,,0
+Ed Sheeran,214,185,,0
+Looney,213,58,,0
+Carpenter,213,86,,0
+Stefanos Tsitsipas,213,196,,0
+Kyle Sinckler,213,196,,0
+Berman,213,54,,0
+Patrick Vallance,213,199,,0
+Linda Burney,213,190,,0
+Mario Balotelli,213,171,,0
+Fidesz,213,113,,0
+Robert De Niro,213,186,,0
+Menindee,213,80,,0
+Eric Dier,213,195,,0
+Hussein,213,82,,0
+Dawn,212,95,,0
+Morecambe,212,146,,0
+Partygate,212,179,,0
+Glover,212,76,,0
+Frankie Dettori,212,176,,0
+Mel Stride,212,184,,0
+Mercer,212,70,,0
+Daisy,212,125,,0
+Elsa,212,75,,0
+Sean Hannity,212,189,,0
+Jorge Lorenzo,212,125,,0
+Crow,212,79,,0
+Ramsay,212,90,,0
+Hermoso,212,84,,0
+Hooper,212,85,,0
+Reyes,212,54,,0
+Derek,212,95,,0
+Brent,212,136,,0
+Caitlin Foord,212,201,,0
+Slade,211,124,,0
+Vunipola,211,121,,0
+Weber,211,81,,0
+Stephen Lawrence,211,155,,0
+Bridget Phillipson,211,196,,0
+Al-Araibi,211,32,,0
+Leroy,211,180,,0
+Reese,211,54,,0
+Travis,210,115,,0
+Derek Chauvin,210,165,,0
+Olivia Colman,210,178,,0
+Angel,210,111,,0
+Van Gaal,210,74,,0
+Lindell,210,29,,0
+Gabriel Martinelli,210,207,,0
+Hannity,210,66,,0
+Arsène Wenger,210,194,,0
+Kevin Rudd,209,195,,0
+Shamima Begum,209,136,,0
+Gillard,209,135,,0
+Philip Lowe,209,187,,0
+Nicolas Sarkozy,209,177,,0
+Salazar,209,59,,0
+Brownlow,209,88,,0
+ANU,209,123,,0
+Cressida Dick,209,182,,0
+Parry,209,82,,0
+Weir,209,74,,0
+Hanks,209,56,,0
+Anthony Gordon,209,203,,0
+Mum,209,168,,0
+Matt Kean,209,183,,0
+Dimitrov,208,70,,0
+Watt,208,106,,0
+Ma,208,79,,0
+Rafael Benítez,208,197,,0
+Donovan,208,82,,0
+Rowley,208,113,,0
+Raisi,208,55,,0
+Cher,208,135,,0
+Finn Russell,208,192,,0
+Kurz,208,51,,0
+Massa,208,82,,0
+Ilhan Omar,208,187,,0
+Gary O’Neil,208,202,,0
+Ellis Genge,207,195,,0
+Buck,207,80,,0
+Carrie Symonds,207,176,,0
+Jesse,207,99,,0
+Melania Trump,207,165,,0
+Lily,206,134,,0
+Manuel Pellegrini,206,193,,0
+Hutchins,206,56,,0
+Toni Kroos,206,187,,0
+David Shoebridge,206,191,,0
+Valentino Rossi,206,131,,0
+Pauline Hanson,206,171,,0
+Frances,205,101,,0
+Emmanuel Macron’s,205,193,,0
+Caine,205,37,,0
+Pinter,205,96,,0
+Fetterman,205,43,,0
+Ramaphosa,205,67,,0
+Gore,205,86,,0
+Kepa Arrizabalaga,205,198,,0
+Gibbs,205,85,,0
+Hoffman,205,80,,0
+Sam Curran,205,180,,0
+Frozen,205,94,,0
+Tugendhat,205,100,,0
+Daniel Craig,205,163,,0
+Koeman,204,82,,0
+Sergio Aguero,204,168,,0
+Niemann,204,40,,0
+Solanke,204,114,,0
+Benny Gantz,204,185,,0
+Fiennes,204,50,,0
+Collaery,204,45,,0
+Roy Keane,204,190,,0
+Isak,204,93,,0
+Alejandro Garnacho,204,200,,0
+Jonathan Ashworth,204,198,,0
+Mosley,204,48,,0
+Nassar,204,38,,0
+Jeffries,204,80,,0
+Goodwin,204,79,,0
+Mikel Arteta’s,204,200,,0
+Anne Geeves,204,48,,0
+Eze,204,97,,0
+Fury,204,86,,0
+Ramsdale,204,95,,0
+Brereton,203,69,,0
+Aaron Ramsey,203,185,,0
+George Monbiot,203,152,,0
+Bullock,203,83,,0
+Mark Carney,203,192,,0
+Jon Rahm,203,184,,0
+Breonna Taylor,203,154,,0
+Cooke,203,78,,0
+Leach,203,103,,0
+Peckham,203,111,,0
+Benson,203,109,,0
+Teixeira,203,54,,0
+Bourne,202,63,,0
+Luis Díaz,202,195,,0
+Calla Wahlquist,202,200,,0
+Khalife,201,34,,0
+Satan,201,148,,0
+Malik,201,98,,0
+Mendes,201,69,,0
+Karl,201,89,,0
+Kamala Harris’s,201,190,,0
+Koepka,201,90,,0
+Manus,201,99,,0
+Depop,201,102,,0
+Thomson,201,75,,0
+Greenberg,201,68,,0
+Dmitry Medvedev,201,186,,0
+Felipe,201,140,,0
+Ødegaard,201,99,,0
+Alba,200,111,,0
+Nakamura,200,69,,0
+David Gauke,200,189,,0
+Priya,200,53,,0
+Eddie Jones’s,200,191,,0
+Toby,200,81,,0
+Tarantino,200,90,,0
+Kavanaugh,200,82,,0
+Fernando,200,137,,0
+Beethoven,200,136,,0
+John Lennon,200,174,,0
+Pence,200,121,,0
+Healy,200,78,,0
+Wilde,200,86,,0
+Mc Kee,200,58,,0
+Claudio Ranieri,199,170,,0
+Luton,199,146,,0
+King Lear,199,160,,0
+Dele Alli,199,190,,0
+John Paul II,199,124,,0
+Cate Blanchett,199,167,,0
+Bouchard,199,57,,0
+Raphinha,199,103,,0
+Setka,199,34,,0
+Zoe,199,99,,0
+Michael Mc Cormack,199,182,,0
+Wang Yi,199,176,,0
+George Pell,199,131,,0
+Clare O’Neil,198,178,,0
+Shinzo Abe,198,186,,0
+Katy Gallagher,198,180,,0
+Sondheim,198,80,,0
+Wray,198,73,,0
+Tudor,198,153,,0
+Whitmer,197,74,,0
+Atkins,197,88,,0
+Antoine Dupont,197,180,,0
+Cilic,197,69,,0
+Diane,197,108,,0
+Rashford,197,129,,0
+Berhalter,197,58,,0
+Lauda,197,55,,0
+Johns,197,59,,0
+Alvin Bragg,197,175,,0
+Ashleigh Barty,196,173,,0
+Bubba Watson,196,152,,0
+Hoyle,196,79,,0
+Isaac,196,86,,0
+Fernandez,196,65,,0
+Clegg,196,68,,0
+Bowers,196,35,,0
+Jacqui Lambie,196,174,,0
+Chris Grayling,196,172,,0
+Maureen,196,61,,0
+Gretchen Whitmer,196,186,,0
+Lang,196,76,,0
+Arsene Wenger,196,158,,0
+Hale,196,68,,0
+Nicole Kidman,196,178,,0
+Magnus Carlsen,196,165,,0
+Black Panther,196,150,,0
+Sandra,196,94,,0
+Ranieri,196,81,,0
+Mc Queen,196,70,,0
+Alessia Russo,196,190,,0
+Bolt,196,100,,0
+Hayne,195,57,,0
+Travis Mc Michael,195,38,,0
+Lloyd,195,94,,0
+Fernandinho,195,147,,0
+Ahmaud Arbery,195,100,,0
+Mc Cann,195,75,,0
+Marc Marquez,195,107,,0
+Stein,195,89,,0
+Mohamed,195,92,,0
+Man United,194,160,,0
+Mc Ginn,194,107,,0
+Sarah Hanson-Young,194,177,,0
+Douglas Luiz,194,124,,0
+Alfie,194,84,,0
+Coco,194,99,,0
+Youngkin,194,44,,0
+Grimsby,194,111,,0
+Clyde,194,114,,0
+Swinson,194,82,,0
+Barack Obama’s,194,191,,0
+Stella,194,124,,0
+Shane Warne,193,145,,0
+Scott Murray,193,192,,0
+nick,193,191,,0
+Aipac,193,42,,0
+Michel Platini,193,150,,0
+Dan Evans,193,182,,0
+Coe,193,77,,0
+Berdych,193,103,,0
+Fritz,193,55,,0
+Dee,193,98,,0
+Boko Haram,193,64,,0
+Marcelo,192,120,,0
+Dorsey,192,55,,0
+Roger Stone,192,138,,0
+Francois Hollande,192,163,,0
+Peter Dutton’s,192,175,,0
+Natalie,192,82,,0
+Cleary,192,48,,0
+George Clooney,192,154,,0
+Bibi,192,95,,0
+Youri Tielemans,192,183,,0
+Batman,192,137,,0
+Brook,192,85,,0
+Goliath,192,172,,0
+Wesley,192,138,,0
+Meyer,192,88,,0
+Hipkins,191,71,,0
+Dean Smith,191,185,,0
+Breyer,191,47,,0
+Henry VIII,191,151,,0
+Correa,191,56,,0
+Valentino,191,123,,0
+Spence,191,77,,0
+Jannik Sinner,191,181,,0
+birdsong,191,168,,0
+Lisandro,191,183,,0
+Nicolas,191,160,,0
+Mansour,191,113,,0
+Wootton,191,46,,0
+Joe Marler,191,172,,0
+Conor Mc Gregor,191,96,,0
+Goldstein,190,70,,0
+Diego Simeone,190,179,,0
+Symonds,190,77,,0
+Chloe,190,110,,0
+Oprah Winfrey,190,176,,0
+Michael Olise,190,183,,0
+Hyde,190,120,,0
+Jonathan Freedland,190,146,,0
+Alexander Isak,190,188,,0
+Ronnie,190,93,,0
+Tyrone Mings,190,185,,0
+Sergio Garcia,190,145,,0
+Haaland,190,131,,0
+Hallett,190,71,,0
+Andrea,189,113,,0
+Fumio Kishida,189,175,,0
+Meryl Streep,189,168,,0
+Cleo,189,48,,0
+Hitchcock,189,112,,0
+Von der Leyen,189,113,,0
+Nick Clegg,189,174,,0
+Eastman,189,44,,0
+Alex Chalk,189,175,,0
+Irwin,189,43,,0
+Jerome Powell,188,178,,0
+Enzo Maresca,188,178,,0
+Marnus Labuschagne,188,183,,0
+Juan Carlos,188,67,,0
+Heather,188,103,,0
+Rita,188,84,,0
+Ryan Gosling,188,159,,0
+Pinochet,188,79,,0
+David Squires,188,162,,0
+Greg,188,98,,0
+Blunt,188,52,,0
+Schultz,188,46,,0
+Machado,188,61,,0
+Amy Klobuchar,188,174,,0
+Picasso,188,116,,0
+Hardy,188,88,,0
+Juan Martin del Potro,188,150,,0
+Garrett,188,57,,0
+Horton,188,58,,0
+Tom Hanks,188,151,,0
+Ben Foakes,188,173,,0
+Amy Coney Barrett,187,167,,0
+Greta,187,106,,0
+John Mc Ginn,187,183,,0
+Keneally,187,75,,0
+Montoya,187,69,,0
+Elina Svitolina,187,159,,0
+Eve,187,130,,0
+Lear,187,89,,0
+Abba,187,138,,0
+Elaine,187,69,,0
+Rex Patrick,187,162,,0
+Eddie Howe’s,187,181,,0
+Crouch,186,81,,0
+Arlene Foster,186,157,,0
+Lindsay,186,96,,0
+Betty,186,103,,0
+Luis Rubiales,186,149,,0
+Jen Psaki,186,184,,0
+Dominic Grieve,185,176,,0
+Sam Underhill,185,176,,0
+Goldberg,185,57,,0
+Patrick Vieira,185,178,,0
+Hastings,185,127,,0
+jack,185,163,,0
+Bill de Blasio,185,177,,0
+Bucha,185,108,,0
+Cop,185,123,,0
+Lizzo,185,85,,0
+Xabi Alonso,185,163,,0
+Fletcher,185,102,,0
+Chris Froome,184,140,,0
+Nicole,184,94,,0
+Poitier,184,20,,0
+Deschamps,184,68,,0
+Gallant,184,95,,0
+Harman,184,78,,0
+Lidia Thorpe,184,165,,0
+George Soros,184,155,,0
+Monica,184,84,,0
+Usman Khawaja,184,172,,0
+Bridget Mc Kenzie,184,172,,0
+Davis Cup,183,141,,0
+Grenfell,183,135,,0
+Mali,183,111,,0
+Sofronoff,183,42,,0
+Entain,183,51,,0
+Samuel Alito,183,170,,0
+Kim Kardashian,183,166,,0
+Manuel Neuer,183,172,,0
+Godzilla,183,92,,0
+Meng,183,41,,0
+Andrew Mitchell,183,163,,0
+Connor,183,78,,0
+Pearson,183,108,,0
+Ferdinand,183,77,,0
+Nina,183,96,,0
+Ortiz,183,55,,0
+Shelley,183,77,,0
+Crowley,183,79,,0
+Fine Gael,182,62,,0
+Rebecca Long-Bailey,182,159,,0
+Oleksandr Zinchenko,182,180,,0
+Jude,182,103,,0
+John Mc Enroe,182,161,,0
+Naomi,182,106,,0
+Chandler,182,86,,0
+Julian Nagelsmann,182,179,,0
+Stuart Robert,182,143,,0
+Lola,182,60,,0
+Zoe Williams,182,162,,0
+Pratt,182,63,,0
+Brian Kemp,182,160,,0
+Karine Jean-Pierre,182,178,,0
+Clive Palmer,181,150,,0
+Andy Street,181,152,,0
+Henrik Stenson,181,153,,0
+Parris,181,79,,0
+Chris Bryant,181,165,,0
+Thomas Frank,181,176,,0
+Ibsen,181,99,,0
+Philippe Coutinho,181,165,,0
+Isner,181,66,,0
+Gilmour,181,102,,0
+Parks,181,85,,0
+Nicholas,181,116,,0
+Mick,181,101,,0
+Peter Bradshaw,181,174,,0
+Manu Tuilagi,180,169,,0
+Jun,180,38,,0
+Chris Christie,180,158,,0
+Ronald Koeman,180,168,,0
+Penn,180,74,,0
+Bishop,180,79,,0
+Kyriakos Mitsotakis,180,165,,0
+Bercow,180,70,,0
+Manafort,180,39,,0
+Enzo Fernández,180,176,,0
+Aaron Rodgers,180,147,,0
+Keira Walsh,180,172,,0
+Snow,180,120,,0
+Robert Buckland,180,166,,0
+Steph Houghton,180,173,,0
+Ben Earl,180,171,,0
+Shane,180,83,,0
+JD,179,81,,0
+Rajapaksa,179,31,,0
+Warren Murray,179,179,,0
+Wetherspoon,179,68,,0
+Nacc,179,37,,0
+Radwanska,179,84,,0
+Alexis Mac Allister,179,175,,0
+Jarvis,179,84,,0
+Hochul,179,69,,0
+Bobby Charlton,179,123,,0
+Dan Biggar,178,164,,0
+Mac Allister,178,87,,0
+Jay-Z,178,113,,0
+Newell,178,67,,0
+Stark,178,91,,0
+Pablo,178,113,,0
+Mc Kinsey,178,109,,0
+Liam Fox,178,164,,0
+Wenger,178,109,,0
+Leno,178,93,,0
+Jimmy Savile,178,120,,0
+Landry,178,44,,0
+Malan,178,65,,0
+Breivik,178,29,,0
+Sebastian,178,121,,0
+Harvey Barnes,178,171,,0
+Almeida,177,105,,0
+Mc Fadden,177,73,,0
+Cyril Ramaphosa,177,164,,0
+Pocock,177,107,,0
+Murdaugh,177,20,,0
+Mc Ilroy’s,177,116,,0
+Creasy,177,61,,0
+Mako Vunipola,177,156,,0
+Shields,177,68,,0
+Richard Gasquet,177,153,,0
+Everton,177,164,,0
+Starr,177,54,,0
+Dolly,177,79,,0
+Ivanovic,177,65,,0
+Abraham Lincoln,177,155,,0
+Tina,176,103,,0
+Gwyneth Paltrow,176,146,,0
+Joel,176,100,,0
+Emiliano Sala,176,97,,0
+John Barilaro,176,153,,0
+Curtis Jones,176,166,,0
+Maurice,176,79,,0
+Kathy Hochul,176,162,,0
+Platini,176,57,,0
+John Mc Cain,176,153,,0
+Natasha,176,102,,0
+Kagame,176,40,,0
+Doku,176,115,,0
+Mahmoud Abbas,176,166,,0
+Clive,176,81,,0
+Achilles,175,127,,0
+Carl,175,91,,0
+Jesus Christ,175,159,,0
+Harden,175,56,,0
+Hakeem Jeffries,175,163,,0
+Paul Mc Cartney,175,157,,0
+Giuseppe Conte,175,160,,0
+Tim Scott,175,153,,0
+Miedema,175,78,,0
+Ghislaine Maxwell,175,125,,0
+Leandro Trossard,175,173,,0
+Wayne Couzens,175,148,,0
+Bury,175,97,,0
+Esther,175,84,,0
+Zac Goldsmith,175,156,,0
+Alfred,175,87,,0
+Ralf Rangnick,175,165,,0
+Victor,175,103,,0
+Muguruza,175,47,,0
+Clayton,175,55,,0
+Coulson,175,38,,0
+Ross Barkley,174,168,,0
+Audrey,174,72,,0
+Nick Pope,174,167,,0
+Tsonga,174,103,,0
+Nicola,174,111,,0
+Prince Mohammed,174,78,,0
+Vindman,174,22,,0
+Barnett,174,82,,0
+Miranda,174,89,,0
+Denis,174,110,,0
+Marcos,174,71,,0
+Hertha,174,80,,0
+Dahl,174,51,,0
+Palin,174,44,,0
+Ted Baker,174,69,,0
+Browns,174,97,,0
+Hugh,174,77,,0
+Coates,174,93,,0
+Tutu,174,24,,0
+Kurt Zouma,174,169,,0
+Edinson Cavani,174,161,,0
+Caruana,174,66,,0
+Patrick Reed,173,129,,0
+Boateng,173,82,,0
+Travis Head,173,160,,0
+Danny Ings,173,167,,0
+Hollingworth,173,32,,0
+Aston Villa’s,173,170,,0
+Pincher,173,45,,0
+Hicks,173,68,,0
+Lisa Wilkinson,173,147,,0
+Massey,173,38,,0
+Chadwick,173,55,,0
+Juan Merchan,173,154,,0
+Tran,173,45,,0
+Ian Wright,173,154,,0
+Dodds,173,82,,0
+Toro Rosso,173,132,,0
+neo-Nazis,173,142,,0
+Justin Thomas,172,149,,0
+Kılıçdaroğlu,172,34,,0
+Masterclasses,172,149,,0
+Finch,172,72,,0
+Jason Clare,172,164,,0
+Andrzej Duda,172,156,,0
+Mc Guinness,172,56,,0
+Alexandre Lacazette,172,166,,0
+Garrick,172,73,,0
+Ben Roberts-Smith,172,106,,0
+Hassan Rouhani,172,155,,0
+Hatton,172,64,,0
+Alice Springs,172,127,,0
+Caesar,172,94,,0
+Johnny Depp,171,138,,0
+Stevie,171,122,,0
+Samantha,171,104,,0
+De Gea,171,106,,0
+Chris Wilder,171,167,,0
+Patricia,171,99,,0
+Elphicke,171,39,,0
+Weisselberg,171,40,,0
+João,171,146,,0
+Anita,171,86,,0
+Jonathan Wilson,171,161,,0
+Peter Beaumont,171,155,,0
+Shaun,171,93,,0
+Tony Gustavsson,171,159,,0
+Stanley,170,109,,0
+Rohit Sharma,170,159,,0
+Juan Guaidó,170,137,,0
+Le Bron,170,94,,0
+Bellamy,170,48,,0
+Graham Brady,170,155,,0
+Owen Paterson,170,153,,0
+Ho,170,73,,0
+Danilo,170,115,,0
+Shane Lowry,170,140,,0
+Callum,170,95,,0
+Juan Mata,170,151,,0
+Moran,170,90,,0
+Geoff Barton,170,170,,0
+Didier Drogba,170,145,,0
+Robert Geeves,170,33,,0
+Duda,169,69,,0
+David Anderson,169,142,,0
+Jerry,169,105,,0
+Ralph,169,91,,0
+Richard Tice,169,147,,0
+Stella Creasy,169,151,,0
+Harriet Harman,169,155,,0
+Brooke,169,46,,0
+Carrick,169,70,,0
+Lebedev,169,49,,0
+Steve Borthwick’s,169,154,,0
+Martina Navratilova,169,147,,0
+Origi,169,117,,0
+Richard Branson,169,145,,0
+Ismail Haniyeh,169,150,,0
+Ethan,169,76,,0
+Ben Youngs,169,159,,0
+Alun Wyn Jones,169,150,,0
+Greaves,169,46,,0
+Peck,168,33,,0
+Odiong,168,7,,0
+Thomas Partey,168,164,,0
+Ken Loach,168,148,,0
+Pacquiao,168,38,,0
+Bridges,168,77,,0
+Raikkonen,168,82,,0
+Gayle,168,65,,0
+Dalton,168,70,,0
+George Eustice,168,152,,0
+Nicolas Jackson,168,164,,0
+Steve Cooper,168,157,,0
+Klobuchar,168,58,,0
+Nielsen,168,77,,0
+Lachlan Murdoch,168,122,,0
+Frankenstein,168,124,,0
+Holly,168,64,,0
+Stacey,168,102,,0
+Stephenson,167,60,,0
+Emma Stone,167,140,,0
+Broughton,167,57,,0
+Hodgkinson,167,52,,0
+Osama bin Laden,167,146,,0
+Marc,167,102,,0
+Benedict XVI,167,106,,0
+Tim Walker,167,160,,0
+Jonathan Reynolds,167,157,,0
+Hadrian,167,106,,0
+Skye,166,105,,0
+Farrow,166,37,,0
+Coen,166,109,,0
+Ward-Prowse,166,104,,0
+Valverde,166,63,,0
+Rory Burns,166,154,,0
+Menzies,166,77,,0
+Kew,166,89,,0
+Ryan Giggs,166,152,,0
+Colwill,166,71,,0
+Kamala,166,111,,0
+Ainslie,166,34,,0
+La Liga,166,150,,0
+Santiago,166,133,,0
+Grindr,165,56,,0
+Kadyrov,165,39,,0
+Brandon Lewis,165,137,,0
+Kamara,165,68,,0
+Karim,165,60,,0
+Alston,165,50,,0
+Ryan Reynolds,165,141,,0
+Fabian,165,144,,0
+Dom Phillips,165,113,,0
+Ramirez,165,52,,0
+William Hill,165,87,,0
+Raskin,165,73,,0
+Mc Kay,165,70,,0
+Tyneside,165,155,,0
+Ellen,165,104,,0
+Dominic Solanke,165,155,,0
+Jonathan Liew,165,149,,0
+Adama,165,119,,0
+Dickson,165,63,,0
+Prince George,164,120,,0
+Yanukovych,164,57,,0
+Keller,164,42,,0
+Anneliese Dodds,164,155,,0
+Agnew,164,60,,0
+Levin,164,83,,0
+Emiliano,164,129,,0
+Zali Steggall,164,147,,0
+Johan Cruyff,164,128,,0
+Shelton,164,31,,0
+Johansson,164,72,,0
+Noble Francis,164,147,,0
+Banksy,164,89,,0
+Dorian,164,49,,0
+Lyons,164,75,,0
+Nguyen,164,61,,0
+Annalena Baerbock,164,163,,0
+Siya Kolisi,164,136,,0
+Paul Keating,164,143,,0
+Quentin Tarantino,164,145,,0
+Alex Greenwood,163,160,,0
+Tice,163,58,,0
+Kelce,163,45,,0
+Jill Scott,163,151,,0
+Evan Gershkovich,163,139,,0
+Buchanan,163,65,,0
+Edward Snowden,163,134,,0
+Andrew Giles,163,147,,0
+Charlotte,163,123,,0
+Klitschko,163,66,,0
+Laura Smith-Spark,163,163,,0
+Al Pacino,163,152,,0
+Davos,163,91,,0
+Mace,163,62,,0
+Henderson,163,115,,0
+Klein,163,71,,0
+Michele,163,55,,0
+Steph Catley,162,151,,0
+Ashley Young,162,154,,0
+Evin,162,89,,0
+Jennifer Lopez,162,148,,0
+Garfield,162,72,,0
+Brennan Johnson,162,160,,0
+Louvre,162,85,,0
+Kidd,162,55,,0
+Rahman,162,73,,0
+Castillo,162,48,,0
+Mings,162,88,,0
+Emmett,162,58,,0
+Megan,162,92,,0
+Kohl,162,31,,0
+Arne Slot,162,148,,0
+Steven Miles,162,139,,0
+Qin,162,40,,0
+Katharine Viner,162,143,,0
+Sasha,161,71,,0
+Gosling,161,71,,0
+Jacques,161,72,,0
+Rosie,161,113,,0
+Sharon,161,98,,0
+Ella Toone,161,151,,0
+Spike Lee,161,136,,0
+Lauren Hemp,161,155,,0
+Tim Davie,161,142,,0
+Kate Moss,161,141,,0
+Major,161,91,,0
+Borrell,161,91,,0
+Mac,161,84,,0
+Brad Raffensperger,161,146,,0
+Stenson,161,57,,0
+Kafka,161,80,,0
+Danny Care,161,144,,0
+Cruyff,161,85,,0
+Sonny,161,70,,0
+Carrington,160,97,,0
+Museveni,160,40,,0
+Hanna,160,49,,0
+Emma Thompson,160,147,,0
+Catley,160,72,,0
+Farmer,160,75,,0
+Farhad Moshiri,160,149,,0
+Briggs,160,59,,0
+Bevan,160,62,,0
+Beale,160,49,,0
+Judi Dench,160,148,,0
+Carles Puigdemont,160,124,,0
+Frank Lampard’s,160,137,,0
+Leahy,160,41,,0
+Christie,160,82,,0
+Grossi,160,63,,0
+Frasers,160,45,,0
+Allardyce,160,61,,0
+Paul Fletcher,160,146,,0
+Nishikori,160,74,,0
+Monfils,160,65,,0
+Northam,159,31,,0
+Leah,159,77,,0
+Leadsom,159,66,,0
+Thornton,159,71,,0
+Roach,159,51,,0
+Sharon Graham,159,150,,0
+Anna Soubry,159,139,,0
+Michael Owen,159,145,,0
+Bridget,159,65,,0
+Chloe Kelly,159,151,,0
+Woolf,159,85,,0
+Vivek Ramaswamy,159,146,,0
+Compton,159,87,,0
+chuck,159,155,,0
+Dan Sabbagh,159,124,,0
+Sampson,159,54,,0
+Bernd Leno,159,156,,0
+Sampdoria,159,112,,0
+Didier Deschamps,158,148,,0
+Rio Ferdinand,158,140,,0
+Bruno Guimarães,158,152,,0
+Sarwar,158,57,,0
+Cameron Norrie,158,152,,0
+Steve Clarke,158,145,,0
+Romain Grosjean,158,129,,0
+Fleabag,158,95,,0
+Kick It Out,158,103,,0
+St Andrews,158,101,,0
+Lewis Dunk,158,152,,0
+Saddam Hussein,158,134,,0
+Ruben Loftus-Cheek,158,151,,0
+Brenda,158,65,,0
+Nathan Aké,158,156,,0
+Thibaut Courtois,158,154,,0
+Carmen,158,78,,0
+Ricky,158,44,,0
+Scholes,158,65,,0
+Polanski,158,54,,0
+Al Jaber,158,41,,0
+Monk,158,35,,0
+Barrowman,157,34,,0
+Sam Allardyce,157,148,,0
+Hawley,157,54,,0
+Yorkshireman,157,148,,0
+Ruth Bader Ginsburg,157,140,,0
+Vanessa,157,62,,0
+Herrera,157,79,,0
+Paez,157,31,,0
+Mahmood,157,83,,0
+Solskjaer,157,66,,0
+Chau,157,25,,0
+Ana,157,76,,0
+Allegri,157,63,,0
+Pac,157,100,,0
+Alex Jones,157,117,,0
+Der Spiegel,157,123,,0
+Sloane Stephens,157,137,,0
+Del Potro,157,81,,0
+Ian Mc Kellen,157,139,,0
+Greg Norman,157,132,,0
+Pope Francis,157,144,,0
+Michaelia Cash,156,145,,0
+Anne Hidalgo,156,144,,0
+Willow,156,96,,0
+Frances O’Grady,156,153,,0
+Scarlett Johansson,156,139,,0
+Buckland,156,85,,0
+Jane Austen,156,121,,0
+Arsenal,156,150,,0
+Geraint Thomas,156,135,,0
+Craig Kelly,156,132,,0
+Andonovski,156,44,,0
+Clooney,156,62,,0
+Lagerfeld,156,33,,0
+Garnacho,156,85,,0
+Lenin,156,95,,0
+Harper Collins,156,114,,0
+Dawid Malan,156,143,,0
+Mahsa Amini,156,130,,0
+Jacob Blake,156,93,,0
+Alex Salmond,156,134,,0
+Tiafoe,156,35,,0
+Siri,156,77,,0
+Conway,156,83,,0
+Marin Cilic,156,137,,0
+Rachel Daly,155,147,,0
+Arnold Schwarzenegger,155,146,,0
+Mc Guire,155,46,,0
+Cassidy,155,63,,0
+Gough,155,54,,0
+Frankie,155,102,,0
+Fain,155,42,,0
+Ralph Hasenhüttl,155,150,,0
+Chris Hipkins,155,132,,0
+Rosemary,155,97,,0
+William Saliba,155,153,,0
+Ashwin,155,64,,0
+Catherine King,155,146,,0
+Barney Ronay,155,152,,0
+Madison,155,87,,0
+John Isner,155,131,,0
+Gabriella,155,60,,0
+Cillian Murphy,155,130,,0
+Stephanie,155,91,,0
+Danny Welbeck,154,143,,0
+Brennan,154,96,,0
+John Swinney,154,136,,0
+Virginia Giuffre,154,136,,0
+Forbes,153,108,,0
+Rickie Fowler,153,132,,0
+Kieran Tierney,153,150,,0
+Gérald Darmanin,153,151,,0
+Polly Toynbee,153,119,,0
+Benedict Cumberbatch,153,129,,0
+Simon Clarke,153,140,,0
+Superman,153,108,,0
+Jonny Evans,153,146,,0
+Harlequins,153,115,,0
+Chalmers,153,111,,0
+Alan Joyce,153,116,,0
+Julia Gillard,152,144,,0
+Anas Sarwar,152,138,,0
+Robert F Kennedy Jr,152,138,,0
+Christopher Nkunku,152,149,,0
+Harry Styles,152,129,,0
+Graeme Mc Dowell,152,122,,0
+Omar al-Bashir,152,144,,0
+Dominik Szoboszlai,152,150,,0
+Esther Mc Vey,152,139,,0
+Facebook,152,144,,0
+Harold Pinter,152,115,,0
+Neves,152,100,,0
+Aleksandar Mitrovic,151,148,,0
+Dean Henderson,151,146,,0
+Sid Lowe,151,144,,0
+Villarreal,151,110,,0
+Geoffrey Cox,151,142,,0
+Benjamin Netanyahu’s,151,147,,0
+Janet Yellen,151,147,,0
+Greg Clark,151,143,,0
+Mark Drakeford,151,135,,0
+Rasmus Højlund,150,150,,0
+Geert Wilders,150,115,,0
+Princess Anne,150,118,,0
+Willie Mullins,150,126,,0
+Rassie Erasmus,150,143,,0
+George HW Bush,150,144,,0
+Bill Belichick,150,125,,0
+Sun,149,115,,0
+Rashida Tlaib,149,139,,0
+Joaquin Phoenix,149,133,,0
+Mary Fowler,149,134,,0
+Helen Sullivan,149,149,,0
+Michail Antonio,149,149,,0
+Jeremy Hunt’s,148,133,,0
+Malcolm X,148,109,,0
+Mark Mc Gowan,148,127,,0
+Chris Philp,148,138,,0
+Lucy Powell,148,147,,0
+Andersen,148,101,,0
+Jesse Marsch,148,135,,0
+Tedros Adhanom Ghebreyesus,147,146,,0
+André Onana,147,143,,0
+Manuel Akanji,147,145,,0
+Billie Eilish,147,129,,0
+Russell Crowe,147,110,,0
+Oliver Letwin,147,137,,0
+Boris Becker,147,118,,0
+Dani Pedrosa,147,97,,0
+Doherty,147,99,,0
+Daniel James,147,137,,0
+Stephen King,147,125,,0
+Marc Cucurella,147,145,,0
+Mykhailo Podolyak,147,145,,0
+Anthony Watson,147,143,,0
+Steve Mc Queen,147,127,,0
+Ernie Els,147,125,,0
+Kevin Anderson,147,123,,0
+Angelina Jolie,146,128,,0
+COVID-19,146,128,,0
+De Santis,146,114,,0
+Nikita Parris,146,143,,0
+Helen Mirren,146,139,,0
+Yorgos Lanthimos,145,121,,0
+Jenni Hermoso,145,121,,0
+Age,145,140,,0
+anti-Brexit,145,131,,0
+Maria Zakharova,145,144,,0
+Tilda Swinton,145,128,,0
+Sergio Perez,145,123,,0
+Paul Kelly,145,133,,0
+Al Gore,145,139,,0
+Pat Mc Fadden,145,137,,0
+Doris,145,111,,0
+Nirvana,145,98,,0
+Kristina Keneally,145,130,,0
+Levi Colwill,144,136,,0
+Tadej Pogacar,144,133,,0
+Fofana,144,99,,0
+Luke Cowan-Dickie,144,140,,0
+Paul Mescal,144,121,,0
+Alexa,144,98,,0
+Andy Farrell,144,137,,0
+Josh Hazlewood,144,137,,0
+PSV Eindhoven,143,136,,0
+Harry Kane’s,143,139,,0
+Alex Carey,143,136,,0
+Barnes,143,100,,0
+Stephen Jones,143,132,,0
+Hoffenheim,143,104,,0
+Christopher Nolan,143,130,,0
+Merwe,143,102,,0
+Michael Oliver,143,134,,0
+Neil Warnock,143,128,,0
+Cody Gakpo,143,140,,0
+Christopher Nolan’s,143,129,,0
+Campbell,143,108,,0
+Mariano Rajoy,143,118,,0
+Sidney Powell,143,124,,0
+David Raya,143,138,,0
+Stephen Fry,143,128,,0
+Alan Jones,142,106,,0
+Martin Kaymer,142,107,,0
+Adam Driver,142,115,,0
+Tom Hall of Lonely Planet,142,142,,0
+Luciana Berger,142,116,,0
+Bidens,142,100,,0
+Alex de Minaur,142,133,,0
+Sergio Busquets,142,138,,0
+Ezri Konsa,141,138,,0
+Carrie Johnson,141,97,,0
+Eugene,141,107,,0
+Neil Gorsuch,141,130,,0
+Dan Tehan,141,130,,0
+Emma Graham-Harrison,141,134,,0
+St Paul’s,141,112,,0
+Sophy Ridge,141,137,,0
+Bradley Cooper,141,115,,0
+Martin Scorsese’s,141,130,,0
+Brendan,141,119,,0
+Mark Cavendish,141,126,,0
+George Floyd’s,141,124,,0
+Mathias Cormann,140,127,,0
+Anthony Taylor,140,130,,0
+Wesley Fofana,140,136,,0
+Usain Bolt,140,121,,0
+Mick Lynch,140,135,,0
+Michelangelo,140,100,,0
+Daisy Cooper,140,137,,0
+Murray Watt,140,131,,0
+Wes Anderson,140,97,,0
+Louise Haigh,140,131,,0
+John Pesutto,140,123,,0
+Marilyn Monroe,140,125,,0
+Ken Clarke,140,133,,0
+Emile Smith Rowe,139,134,,0
+Edward Colston,139,117,,0
+Mc Laren’s,139,113,,0
+Victor Osimhen,139,133,,0
+Frenkie de Jong,139,133,,0
+Robin van Persie,139,119,,0
+Peter Thiel,139,119,,0
+Ed Woodward,139,126,,0
+Stephen Colbert,139,131,,0
+Bernardo,139,96,,0
+Daniel Farke,139,132,,0
+Michelle Rowland,138,129,,0
+George W. Bush,138,118,,0
+Louis Oosthuizen,138,119,,0
+Tobias Ellwood,138,129,,0
+Jonas Eidevall,138,136,,0
+Manuel López Obrador,138,135,,0
+Deontay Wilder,138,97,,0
+Theo Walcott,137,124,,0
+Woody Allen,137,112,,0
+Stacey Abrams,137,107,,0
+Bruce Springsteen,137,124,,0
+Victoria Beckham,137,117,,0
+Bernie Ecclestone,137,104,,0
+Itamar Ben-Gvir,137,128,,0
+buff,137,131,,0
+Scott Parker,137,130,,0
+João Cancelo,136,133,,0
+Bryson De Chambeau,136,124,,0
+Nicky Henderson,136,122,,0
+Alastair Campbell,136,120,,0
+Aileen Cannon,136,110,,0
+Nicky Morgan,136,132,,0
+Carlos Tevez,136,106,,0
+Kate Forbes,136,115,,0
+Mario Draghi,136,121,,0
+Huw Edwards,136,96,,0
+Fikayo Tomori,136,132,,0
+Douglas Ross,136,122,,0
+Andre Agassi,136,122,,0
+Steffi Graf,136,120,,0
+Mike Tyson,136,114,,0
+Ben Davies,135,132,,0
+Julia Roberts,135,118,,0
+Steve Reed,135,125,,0
+Thames Water,135,97,,0
+Anna Wintour,135,116,,0
+God,135,130,,0
+John Healey,135,130,,0
+Lamar Jackson,135,118,,0
+Thérèse Coffey,135,135,,0
+James Paterson,135,124,,0
+Kasper Schmeichel,135,132,,0
+Grenfell Tower,134,113,,0
+Johanna Konta,134,128,,0
+Diogo Dalot,134,134,,0
+Guardian Faber,134,134,,0
+Michelle Donelan,134,116,,0
+Alexander Mc Queen,134,120,,0
+Kenny Dalglish,134,118,,0
+Ken Wyatt,134,116,,0
+Harold Wilson,134,126,,0
+George VI,134,121,,0
+Jasprit Bumrah,134,128,,0
+Michael Flynn,134,123,,0
+Andy Warhol,134,122,,0
+Alex Mitchell,134,129,,0
+Sebastian Coe,133,127,,0
+gore,133,119,,0
+Pierre-Emile Højbjerg,133,131,,0
+Lucas Moura,133,127,,0
+Zach Johnson,132,97,,0
+Pierre Gasly,132,119,,0
+Andrew Marr Show,132,127,,0
+Downing Street,132,127,,0
+Joe Schmidt,132,121,,0
+Sandro Tonali,132,124,,0
+Ayatollah Ali Khamenei,132,125,,0
+Shabana Mahmood,132,127,,0
+Heather Knight,132,123,,0
+Michael Caine,132,125,,0
+Oprah,132,99,,0
+Sadio Mane,131,105,,0
+Michael Cheika,131,119,,0
+Ralph Fiennes,131,117,,0
+Kane Williamson,131,116,,0
+Andy Roddick,131,111,,0
+Jack Nowell,130,121,,0
+Trent,130,102,,0
+Matt Damon,130,115,,0
+Noni Madueke,130,126,,0
+Stephen Curry,130,113,,0
+Mick Jagger,130,119,,0
+Joe Root’s,130,122,,0
+Bob Marley,130,113,,0
+Rory Mc,130,113,,0
+Ollie Lawrence,130,126,,0
+Anthony Albanese’s,130,125,,0
+Victoria Atkins,130,121,,0
+Katie Boulter,130,125,,0
+Suzanne Wrack,129,124,,0
+Sam Altman,129,117,,0
+Jacques Chirac,129,112,,0
+Lance Stroll,129,121,,0
+Allan Saint-Maximin,129,125,,0
+Chuka Umunna,129,111,,0
+Rose Lavelle,129,111,,0
+Dave Brailsford,129,125,,0
+Billie Jean King,129,114,,0
+Tsai Ing-wen,129,116,,0
+Scottie Scheffler,129,115,,0
+Alex Oxlade-Chamberlain,129,126,,0
+Taylor Swift’s,129,120,,0
+Tomas Soucek,128,125,,0
+Lucy Frazer,128,123,,0
+Liam Williams,128,115,,0
+Marco Reus,128,116,,0
+James Comey,128,108,,0
+Bernard Tomic,128,99,,0
+Ana Ivanovic,128,104,,0
+Alejandro Mayorkas,128,115,,0
+Layla Moran,128,125,,0
+Jamie Raskin,128,123,,0
+Lleyton Hewitt,128,110,,0
+Les,128,100,,0
+Stephen Barclay,128,121,,0
+Santo,127,122,,0
+Mark Speakman,127,114,,0
+Dan Cole,127,119,,0
+Qassem Suleimani,127,114,,0
+Viktor Yanukovych,127,114,,0
+Peter Kyle,127,114,,0
+Steph Curry,127,109,,0
+Paulo Dybala,127,105,,0
+Gus Atkinson,127,109,,0
+Christine Lagarde,127,109,,0
+Alastair Cook,127,121,,0
+Raphael Warnock,126,119,,0
+Naomi Campbell,126,114,,0
+George Washington,126,104,,0
+Conor Coady,126,126,,0
+Matt Canavan,126,122,,0
+Kylian Mbappe,126,97,,0
+Donny van de Beek,126,120,,0
+Stuart Hogg,126,123,,0
+Tube,126,106,,0
+Mickey Mouse,126,101,,0
+Mesut Özil,126,120,,0
+Liam Livingstone,126,112,,0
+Elena Rybakina,126,121,,0
+Josko Gvardiol,126,123,,0
+Jamie Carragher,126,114,,0
+Paul Scholes,125,117,,0
+Rodrigo Duterte,125,107,,0
+Edin Dzeko,125,120,,0
+Florence Pugh,125,111,,0
+Chris Silverwood,125,118,,0
+Harry Wilson,125,123,,0
+Moon Jae,125,105,,0
+Paul Nowak,125,119,,0
+Faber,124,101,,0
+Julian Borger,124,108,,0
+Pedro Neto,124,118,,0
+Fabiano Caruana,124,114,,0
+Alec Baldwin,124,104,,0
+Steve Hansen,124,108,,0
+Chris Jordan,124,109,,0
+Matthew Taylor,123,120,,0
+Michael Keane,123,118,,0
+Sonia Sotomayor,123,119,,0
+Anthony Hopkins,123,114,,0
+Joe Hart,123,117,,0
+Clive Lewis,123,110,,0
+Shoaib Bashir,123,112,,0
+Michael Lee,122,108,,0
+Alex Hawke,122,106,,0
+Michael Bloomberg,122,117,,0
+Michele Bullock,122,108,,0
+Dejan Kulusevski,122,120,,0
+Karl Lagerfeld,122,105,,0
+Jeffrey Donaldson,122,110,,0
+Steve Scalise,122,107,,0
+Ebrahim Raisi,122,110,,0
+Luke Harding,122,102,,0
+Ketanji Brown Jackson,122,112,,0
+Tanguy Ndombele,122,121,,0
+Volodymyr Zelensky,122,110,,0
+Michael Mann,122,112,,0
+Thomas Tuchel’s,122,121,,0
+Gregor Townsend,121,118,,0
+Dan Ashworth,121,115,,0
+Darren Jones,121,116,,0
+Esteban Ocon,121,115,,0
+Jill Ellis,121,104,,0
+Mark Latham,121,97,,0
+Tommy Fleetwood,121,117,,0
+Ayrton Senna,121,104,,0
+Ian Blackford,121,119,,0
+Mesut Ozil,121,98,,0
+Paul Whiteman,121,121,,0
+Bridget Archer,121,108,,0
+Hilary Benn,121,119,,0
+Paul Nicholls,121,108,,0
+Kyrsten Sinema,121,116,,0
+Brad Hazzard,121,113,,0
+Gabriel Magalhães,120,118,,0
+Andrew Neil,120,106,,0
+Danny Rose,120,115,,0
+May,120,113,,0
+Margaret Court,120,101,,0
+Gael Monfils,120,99,,0
+Petr Cech,120,110,,0
+Unai Emery’s,120,118,,0
+Kate Winslet,119,100,,0
+Dianne Feinstein,119,109,,0
+Lucas Digne,119,115,,0
+Elvis Presley,119,113,,0
+Eric Cantona,119,105,,0
+Mark Sedwill,119,105,,0
+Fernando Torres,119,98,,0
+Dan Lawrence,119,102,,0
+Kyrie Irving,119,105,,0
+Penny Sharpe,119,114,,0
+Hassan Nasrallah,119,110,,0
+Jimmy Kimmel,119,108,,0
+Katy Perry,119,98,,0
+Armando Broja,119,112,,0
+Dani Carvajal,119,116,,0
+George Best,118,106,,0
+Kari Lake,118,99,,0
+Snoop Dogg,118,99,,0
+Peter Mandelson,118,109,,0
+Ryan Moore,118,104,,0
+Kevin Magnussen,118,112,,0
+Trevoh Chalobah,118,114,,0
+Michael Safi,118,112,,0
+Joshua Kimmich,118,114,,0
+Kerry Chant,118,115,,0
+Barry Glendenning,118,116,,0
+David Lynch,118,103,,0
+Aidan O’Brien,118,108,,0
+Harrow,118,105,,0
+Don Farrell,118,111,,0
+Gareth Davies,118,115,,0
+Ben Affleck,118,102,,0
+Jordi Alba,117,115,,0
+Rick Scott,117,102,,0
+Ivan Perisic,117,112,,0
+Harrison Ford,117,103,,0
+Damian Hinds,117,108,,0
+Andreas Christensen,117,114,,0
+Keegan Bradley,117,99,,0
+Aleksander Ceferin,117,115,,0
+Pete Sampras,117,103,,0
+Elizabeth Taylor,117,101,,0
+Abdel Fatah al-Sisi,117,112,,0
+Robert Fico,117,100,,0
+Hansi Flick,116,112,,0
+Napac,116,116,,0
+Joe Marchant,116,110,,0
+Naby Keïta,116,114,,0
+Brian Cox,116,107,,0
+St Patrick’s,116,97,,0
+Jane Fonda,116,104,,0
+Xander Schauffele,116,108,,0
+Vitali Klitschko,116,108,,0
+Alex Scott,116,108,,0
+Stephen Kinnock,116,112,,0
+Patrick Bamford,116,112,,0
+max,116,109,,0
+Alex Dombrandt,116,110,,0
+Paul Johnson,116,112,,0
+Oleksandr Usyk,115,101,,0
+Kalidou Koulibaly,115,110,,0
+Robin Hood,115,99,,0
+Xherdan Shaqiri,115,106,,0
+Andrew Bolt,115,97,,0
+Karolina Pliskova,115,105,,0
+Joe Denly,115,110,,0
+Face Time,115,99,,0
+Mikhail Gorbachev,114,97,,0
+Ravindra Jadeja,114,106,,0
+Hannah J Davies,114,113,,0
+Charl Schwartzel,114,96,,0
+Marcos Alonso,114,113,,0
+Nationals,114,104,,0
+Frank Sinatra,114,102,,0
+George Galloway,114,97,,0
+Josh Shapiro,114,100,,0
+Georginio Wijnaldum,114,105,,0
+Ash Barty,114,99,,0
+Richard Masters,114,108,,0
+Travis Kelce,114,98,,0
+Jason Holder,114,105,,0
+James Baldwin,113,96,,0
+Andy Carroll,113,102,,0
+Amanda Davies,113,104,,0
+Idris Elba,113,106,,0
+West Ham’s,113,110,,0
+Ben Houchen,113,99,,0
+Martin Griffiths,113,104,,0
+Kristalina Georgieva,113,96,,0
+Justin Bieber,113,97,,0
+Oscar Piastri,113,106,,0
+Michael O’Leary,113,99,,0
+Nesrine Malik,113,96,,0
+Mourinho,112,106,,0
+Stephen Yaxley-Lennon,112,108,,0
+Frances Tiafoe,112,101,,0
+Glenn Close,112,98,,0
+James Graham,112,96,,0
+Matheus Nunes,112,111,,0
+Chris Skidmore,112,104,,0
+Tim Cook,112,102,,0
+Josh Hawley,112,101,,0
+Andrey Rublev,112,111,,0
+Simon Coveney,112,103,,0
+Jonas Vingegaard,112,107,,0
+Kit Malthouse,112,104,,0
+Andriy Yermak,112,110,,0
+Michael Vaughan,111,106,,0
+Jelena Jankovic,111,97,,0
+Gaby Hinsliff,111,97,,0
+Elena Kagan,111,105,,0
+Ada Hegerberg,111,100,,0
+Alex Iwobi,111,109,,0
+Mark Kelly,111,104,,0
+Harvey Elliott,111,110,,0
+Thomas Müller,110,104,,0
+Roger Goodell,110,99,,0
+Shakespearean,110,102,,0
+Leon Bailey,110,110,,0
+Amadou Onana,110,104,,0
+Mohammed Kudus,110,109,,0
+Molineux,110,102,,0
+Dina Asher-Smith,110,100,,0
+Simon Stevens,110,99,,0
+Massimiliano Allegri,110,107,,0
+Matthew Miller,110,109,,0
+John Eastman,110,97,,0
+Chris Evert,110,98,,0
+Timothée Chalamet,110,103,,0
+Nick Thomas-Symonds,109,106,,0
+Ivan Lendl,109,97,,0
+Cristian Romero,109,106,,0
+Yves Bissouma,109,106,,0
+Daniel Hagari,109,106,,0
+Roald Dahl,109,97,,0
+Len Mc Cluskey,109,104,,0
+Ben Fisher,109,107,,0
+Matt Doherty,109,105,,0
+Neil Kinnock,109,102,,0
+Lyndon Johnson,109,97,,0
+Sean Longstaff,109,109,,0
+Enver Solomon,109,108,,0
+Laurence Olivier,108,102,,0
+Hikaru Nakamura,108,97,,0
+Yahya Sinwar,108,100,,0
+James Brokenshire,108,97,,0
+Rafael Grossi,108,99,,0
+Mehreen Faruqi,108,107,,0
+Damian Green,108,102,,0
+Lenore Taylor,108,104,,0
+Jordan Ayew,108,100,,0
+Jack Willis,107,101,,0
+Ivan Rakitic,107,102,,0
+Andrea Pirlo,107,102,,0
+tweet @The Knowledge_GU,107,100,,0
+Adam Kinzinger,107,102,,0
+Cheslin Kolbe,107,100,,0
+Oscar Wilde,107,97,,0
+Iga Swiatek,107,105,,0
+Nicola Sturgeon’s,107,98,,0
+Lewis Ludlam,106,98,,0
+Mateusz Morawiecki,106,98,,0
+Sergey Lavrov,106,98,,0
+Joni Mitchell,106,97,,0
+Alexia Putellas,105,100,,0
+Robert Halfon,105,103,,0
+Rob Key,105,103,,0
+Susan Collins,105,100,,0
+Charles de Gaulle,105,98,,0
+John Curtice,105,100,,0
+Neal Maupay,105,102,,0
+Chi Hui Lin,105,105,,0
+Trevor Bayliss,105,103,,0
+Dwight Mc Neil,105,103,,0
+Bill Sweeney,104,103,,0
+Henry Arundell,104,97,,0
+João Palhinha,104,102,,0
+Christopher Wray,104,98,,0
+Marlon Brando,104,96,,0
+Jamal Musiala,104,102,,0
+Wout Weghorst,103,99,,0
+Volodymyr Zelenskyy,103,97,,0
+Gabriel Attal,103,98,,0
+Rob Edwards,103,97,,0
+Martin Luther King Jr,103,96,,0
+Jack Draper,103,99,,0
+Billy Gilmour,103,99,,0
+Ian Botham,102,97,,0
+Cameron Green,102,99,,0
+Muammar Gaddafi,102,97,,0
+Jan Vertonghen,102,96,,0
+James Tarkowski,102,101,,0
+William Hague,102,97,,0
+Dick Durbin,102,98,,0
+Rob Smyth,102,102,,0
+Michael Gove’s,102,98,,0
+Gordon Brown’s,102,98,,0
+Greg Hands,101,97,,0
+Alicia Kearns,101,96,,0
+Rob Baxter,101,98,,0
+Harry Winks,101,100,,0
+Tim Farron,101,96,,0
+Giovani Lo Celso,101,99,,0
+Andreas Pereira,100,98,,0
+Martin Dubravka,100,100,,0
+Erin Cuthbert,99,98,,0
+Lukasz Fabianski,98,97,,0
+Joe Willock,97,96,,0
+Mark Mc Call,97,97,,0
+Vasco Cotovio,96,96,,0
